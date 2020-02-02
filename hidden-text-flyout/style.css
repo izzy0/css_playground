@@ -1,0 +1,110 @@
+:root {
+    --content-color: rgb(241, 241, 241);
+    --border-radius-start: 5px;
+    --border-radius-end: 0;
+    --text-color:#353535;
+    --shadow: 0 3px 8px rgba(0, 0, 0, 0.288);
+}
+
+.title {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: var(--border-radius-start);
+    transition: border-radius ease-in-out 1s, background-color ease .5s;
+}
+
+.title:hover {
+    border-radius: var(--border-radius-end);
+}
+
+.content {
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box, .box-2 {
+    background: var(--content-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-start);
+    color:var(--text-color);
+    margin: 20px;
+}
+
+@media (min-width:1024px) {
+    .main {
+        height: 400px;
+        flex-wrap: nowrap;
+    }
+    /* dropdown */
+    .box {
+        box-shadow: none;
+        border-radius: 0;
+        background: var(--text-color);
+        color: #fff;
+        height: 40px;
+        width: 250px;
+        overflow: hidden;
+        max-height: 350px;
+        transition: box-shadow ease-in 1s ,background-color ease-in .5s, border-radius ease-in-out 1s, height ease 1s;
+    }
+    .box:hover {
+        background: var(--content-color);
+        border-radius: var(--border-radius-start);
+        height: 100%;
+        box-shadow: var(--shadow);
+    }
+    .box>.content {
+        height: 0;
+        transition: height ease-in-out 1s, opacity ease-in 1s;
+        opacity: 0;
+        color: var(--text-color);
+    }
+    .box:hover>.content {
+        height: 300px;
+        opacity: 1;
+    }
+    .box:hover>.title {
+        color:var(--text-color);
+    }
+    /* dropdown end */
+    
+    /* expand */
+    .box-2 {
+        box-shadow: none;
+        border-radius: 0;
+        background: var(--text-color);
+        color: #fff;
+        width: 250px;
+        height: 40px;
+        overflow: hidden;
+        max-height: 250px;
+        transition: box-shadow ease-in 1s ,background-color ease-in .5s, width ease-out 1s, border-radius ease-in-out 1s, height ease 1s;
+    }
+    .box-2:hover {
+        box-shadow: var(--shadow);
+        background: var(--content-color);
+        width: 600px;
+        height: 100%;
+        border-radius: var(--border-radius-start);
+    }
+    .box-2>.content {
+        height: 0;
+        transition: height ease-in-out 1s, opacity ease-in-out .5s;
+        opacity: 0;
+        color: var(--text-color);
+        background: var(--content-color);
+    }
+    .box-2:hover>.content {
+        height: 250px;
+        opacity: 1;
+    }
+    .box-2:hover>.title {
+        color:var(--text-color);
+    }
+    /* expand end */
+}

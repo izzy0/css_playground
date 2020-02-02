@@ -1,0 +1,107 @@
+<style>
+    body {
+        background: #efefef;
+    }
+
+    .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 400px;
+        width: 100%;
+    }
+
+    .content {
+        padding: 0 20px 0 50px;
+    }
+
+    /* Copy styles below */
+    /* 
+        Position should be relative if absolute is not used, but is not needed if you are 
+        not including the white space between the divs
+    */
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* 
+        Width is calc by border size (usually border-left or border-right) and divided by 2 
+        and then added to half the with of one div and subtracted from another
+     */
+    .content {
+        background: rgb(204, 204, 204);
+        box-sizing: border-box;
+
+        width: 100%;
+        height: auto;
+    }
+
+    /* 
+        The position will have to be played with to make the angle correctly show on the two 
+        spliting divs. Also a possible nightmare to deal with when making it responsive, unless
+        there is one break point that hides this content when screen size reaches the with of 
+        the content. If this style can be ommited that would work best.
+    */
+    .content::before {
+        visibility: hidden;
+        content: '';
+        position: absolute;
+        border-right: 15px solid #efefef;
+        top: -38px;
+        bottom: -46px;
+        left: 39%;
+        -moz-transform: rotate(26.5deg);
+        -webkit-transform: rotate(26.5deg);
+    }
+
+    .bg-img {
+        background-image: url("bg.png");
+        background-size: cover;
+        background-position: 0 0;
+
+        box-sizing: border-box;
+
+        height: 300px;
+        width: 100%;
+
+    }
+
+    @media (min-width: 1200px){
+        .main {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            
+            width: 1200px;
+            height: 200px;
+        }
+        .content {
+            width: calc(60% - 50px)
+        }
+        .content::before {          
+            visibility: visible;
+        }
+        .bg-img {
+            background-size: 120%;
+            height: 101%;
+            width: calc(40% + 50px);
+            border-right: 100px solid rgb(204, 204, 204);
+            border-top: 200px solid transparent;
+        }
+    }
+</style>
+
+<section class="main">
+    <div class="bg-img"></div>
+    <div class="content">
+        <h2>title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+</section>
