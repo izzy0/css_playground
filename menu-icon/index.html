@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- #resource - https://codepen.io/banik/pen/BVrNXP -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Icon</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+        }
+        #menu-icon {
+            margin: 1em;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        #menu-icon:after, 
+        #menu-icon:before, 
+        #menu-icon div {
+            background-color: #000;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 5px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+        }
+        /* #menu-icon:hover:before {
+            transform: translateY(12px) rotate(135deg);
+        }
+
+        #menu-icon:hover:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }
+
+        #menu-icon:hover div {
+            transform: scale(0);
+        } */
+        /* onClick */
+        .click:before {
+            transform: translateY(12px) rotate(135deg);
+        }
+
+        .click:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }
+
+        .click div {
+            transform: scale(0);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="menu-icon">
+        <div></div>
+      </div>
+</body>
+<script>
+    document.getElementById("menu-icon").onclick = function() {myFunction()};
+
+    function myFunction() {
+        var el = document.getElementById("menu-icon");
+        
+        if(el.classList.contains("click")){
+            el.classList.remove("click");
+        } else {
+            el.classList.add("click");
+        }
+    }
+</script>
+</html>
