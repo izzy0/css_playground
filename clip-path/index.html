@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Just For centering  */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 800px;
+        }
+
+        /* ---- circle clip ---- */
+
+        .clip-card-container {
+            position: relative;
+            clip-path: circle(50px);
+            transition: all 1s ease;
+            padding: 40px;
+            border-radius: 5px;
+            background: url('../img.png') no-repeat;
+            background-position: bottom;
+            background-size: contain;
+        }
+
+        .clip-card-container:hover {
+            clip-path: circle(100%);
+        }
+
+        .clip-text {
+            padding: 30px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* ----------- Clip Button ------------ */
+        .clip-btn {
+            position: relative;
+            background: rgb(61, 90, 250);
+            width: 150px;
+            height: 50px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .clip-bg {
+            clip-path: circle(20px at 5px 5px);
+            transition: all 1s ease;
+            border-radius: 5px;
+            background: rgb(25, 60, 199);
+            height: 100%;
+            width: 100%;
+        }
+
+        .clip-btn:hover .clip-bg {
+            clip-path: circle(100%);
+        }
+
+        .clip-btn-text {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* ----------- Card 2 ------------ */
+        .plain-card {
+            position: relative;
+            border-radius: 10px;
+            /* box-shadow: 0 3px 10px rgba(81, 124, 198, 0.482); */
+            background: #f2f2f2;
+        }
+
+        .clip-card-container-2 {
+            position: relative;
+            clip-path: circle(35px at 10px 10px);
+            transition: all 1s ease;
+            padding: 40px;
+            border-radius: 5px;
+            background: url('../img.png') no-repeat;
+            background-size: cover;
+        }
+
+        .plain-card:hover .clip-card-container-2 {
+            clip-path: circle(100%);
+        }
+
+        .card-details {
+            padding: 30px;
+            font-weight: bold;
+            font-size: 1vw;
+            color: #fff;
+        }
+
+        /* ----------- Card 3 ------------ */
+        .plain-card-3 {
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(81, 124, 198, 0.482);
+            background: #efefef;
+        }
+
+        .clip-card-container-3 {
+            position: relative;
+            clip-path: circle(0px at 0px 0px);
+            transition: all 1s ease;
+            width: 210px;
+            padding: 40px 50px 40px;
+            border-radius: 5px;
+            background: url('../img.png') no-repeat;
+            background-size: cover;
+        }
+
+        .plain-card-3:hover .clip-card-container-3 {
+            clip-path: circle(100%);
+        }
+
+        .card-details-3 {
+            padding: 30px 0;
+            font-weight: bold;
+            font-size: 1vw;
+            color: #fff;
+        }
+
+        .outer-clip-details {
+            font-weight: bold;
+            font-size: 2vw;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 200px;
+
+            padding: 20px 35px;
+
+            color: #353535;
+
+            background: url('../img.png') no-repeat;
+            background-size: cover;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clip-card-container">
+        <div class="clip-text">
+            Some Text
+        </div>
+    </div>
+    <!--  -->
+    <a href="#" class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">
+            BUTTON
+        </div>
+    </a>
+    <!--  -->
+    <div class="plain-card">
+        <div class="clip-card-container-2">
+            <div class="card-details">
+                I have some details here.
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="plain-card-3">
+        <div class="outer-clip-details">
+            Hover over me for a cool effect!
+        </div>
+        <div class="clip-card-container-3">
+            <div class="card-details-3">
+                I have some extra details hidden in here. ;)
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+        }
+
+        .bg-text {
+            font-size: 15vw;
+            /* Fall Back */
+            color: #353535;
+
+            /* Background Image */
+            background: url('../img.png') no-repeat;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            /* Paralax */
+            background-attachment: fixed;
+            background-position: 60%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg-text">Colorado</h1>
+</body>
+</html>
+
