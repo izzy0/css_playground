@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Input</title>
+
+    <style>
+        /* Just For centering  */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 800px;
+        }
+        body > div {
+            padding: 70px auto;
+        }
+        /* https://codepen.io/team/css-tricks/pen/XVBLRM */
+
+        .floating-field {
+            display: flex;
+            flex-flow: column-reverse;
+            margin-bottom: 16px;
+        }
+        .floating-input, .floating-label {
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+
+        .floating-input {
+            font-size: 20px;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            font-family: inherit;
+            -webkit-appearance: none;
+            border-radius: 0;
+            padding: 0;
+            cursor: text;
+            background: transparent;
+        }
+
+        .floating-input:focus {
+            outline: 0;
+            border-bottom: 1px solid #666;
+        }
+
+        .floating-label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            z-index: -1;
+        }
+
+        .floating-input:placeholder-shown + .floating-label {
+            cursor: text;
+            max-width: 66.66%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transform-origin: left bottom;
+            transform: translate(0, 20px) scale(1.5);
+        }
+
+        .floating-input::-webkit-input-placeholder {
+            opacity: 0;
+            transition: inherit;
+        }
+
+        input.floating-input:focus::-webkit-input-placeholder {
+            opacity: 1;
+        }
+
+        input.floating-input:focus + .floating-label {
+            transform: translate(0, 0) scale(1);
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+<div class="floating-field">
+    <input type="text" class="floating-input" name="email" placeholder="someone@email.com">
+    <label for="email" class="floating-label">Email</label>
+</div>
+
+
+</body>
+</html>

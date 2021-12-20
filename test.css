@@ -1,0 +1,233 @@
+#app > div > div.flex-1 {
+	background: #fff;
+}
+
+#product-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    color: #003D68;
+    max-width: 730px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#product-details-container {
+  	display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  	flex-wrap: wrap;
+}
+
+#load-next-post {
+    background: #BFD730;
+    width: 155px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  	transition: ease .4s;
+}
+
+#load-next-post:hover {
+	background: #003D68;
+}
+
+.lesson-stats-instructor-container {
+    max-width: 300px;
+}
+
+
+
+#product-progress-stats .progress {
+	background: #003D68;
+  	overflow: hidden;
+}
+
+#completion-count {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+#progress-completed {
+ 	background: #BFD730;
+  	border-radius: 0;
+}
+
+#instructor-card > div.flex {
+	flex-direction: column;
+    padding: 25px 10px;
+    background: #EDEDED;
+    border-radius: 9px;
+}
+
+#instructor-headshot {
+    border-radius: 40px;
+    border: 10px solid #fff;
+}
+
+#instructor-heading {
+	font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: #000000;
+  	margin-left:25%
+}
+
+#completion-count, #instructor-heading {
+    display:table;
+    margin:0 auto;
+}
+
+#instructor-name {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #003D68;
+    margin-top: 25px;
+}
+
+#instructor-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #003D68;
+}
+
+.category-post-list-container {
+  width:70%;
+}
+
+.category-contents {
+  width:100%;
+}
+
+.category-details .category-post-list-container {
+    width:100%;
+}
+
+.category-details .category-post-list-container .post-list-item {
+	width:220px
+}
+
+
+
+
+
+
+.post-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    color: #003D68;
+  	width: 100%;
+    padding: 0 20px;
+}
+
+.post-image {
+  	width: 100%;
+  	background: #003D68;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #banner {
+    background-position-x: right;
+  }
+  
+  .category-post-list-container {
+    width:100%;
+  }
+  
+  .post-list-item {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  
+  .category-post-list {
+  	justify-content: center;
+  }
+  
+   .post-list-item {
+    width: 100%;
+  }
+  
+  #library-title {
+  	font-size: 22px;
+  }
+}
+
+
+
+/* NEW CODE OFFERS */
+
+#library-container, .shadow {
+	box-shadow: none;
+}
+
+.bg-gray-100 {
+    background: #fff;
+}
+
+#library-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 33px;
+    color: #fff;
+    background: #003d68;
+    padding: 10px;
+    text-align: center;
+  	margin-bottom: 35px;
+    border-radius: 10px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-card {
+	flex-direction: column;
+    /* width: 230px; */
+    background: #EDEDED;  
+  	padding-top: 0;
+    margin: 0 10px 25px 10px;
+  	transition: ease 0.4s;
+  	box-shadow: 0 0px 0px #fff;
+  	border-radius: 10px;
+  	overflow: hidden;
+}  
+
+.product-card:hover {
+	box-shadow: 0 8px 15px #161f4452;
+}
+.product-image {
+  background: linear-gradient(45deg, rgb(93 140 211) 21%, rgb(0 161 255) 100%);
+}
+.view-product-container {
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

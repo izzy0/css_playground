@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+
+      max-width: 800px;
+      margin: 0 auto;
+
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <div class="accordion accordion-flush" id="bodycontainer-0">
+  </div>
+
+  <style>
+    #bodycontainer-0 {
+      height: 700px;
+    }
+
+    .accordion-header,
+    .accordion-item,
+    .accordion-button,
+    #bodycontainer-0,
+    #userHtmlFrame {
+      background: #F0F0F0;
+    }
+
+    .accordion-button {
+      box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    }
+
+    /* header styles */
+    .accordion-header button {
+      text-decoration: none !important;
+      color: #000000;
+      font-family: 'Montserrat';
+      font-variant: normal;
+      font-weight: 500;
+      vertical-align: baseline;
+      font-size: 30.0pt;
+      text-transform: uppercase !important;
+    }
+
+    /* sub header styles */
+    .accordion-body .accordion-header .accordion-button {
+      font-size: 16px;
+    }
+
+    /* plus sign */
+    .accordion-button::after {
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+    }
+
+    /* dropdown arrow  */
+    .hasBody:after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+
+    /* minus sign */
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M0 10h24v4h-24z'/%3E%3C/svg%3E");
+    }
+
+    .onlyBody {
+      padding: 15px;
+      background: #ffffff;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .accordion-body {
+      padding-top: 0;
+    }
+
+    /* for small screens */
+    @media (max-width:768px) {
+      .accordion-header button {
+        font-size: 20px;
+      }
+
+      .accordion-body .accordion-header .accordion-button {
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <script>
+    // JSON Start ( copy from everything in and including the "[ ... ]" ) 
+    const accordionList = [
+      {
+        "parent": "0",
+        "id": "1",
+        "title": "Tax",
+        "body": "",
+        "accordion": [
+          {
+            "parent": "1",
+            "id": "1-1",
+            "title": "179D ENERGY TAX DEDUCTION",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-2",
+            "title": "179D ENERGY TAX DEDUCTION (FOR CONTRACTORS, ENGINEERS, ARCHITECTS, ETC.)",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-3",
+            "title": "IRS AUDIT MONITORING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-4",
+            "title": "IRS PENALTY ABATEMENT",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-5",
+            "title": "COST SEGREGATION",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-6",
+            "title": "45L ENERGY TAX CREDIT",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "1",
+            "id": "1-7",
+            "title": "TAX CONTROVERSY & DISPUTES",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          }
+        ]
+      },
+      {
+        "parent": "0",
+        "id": "2",
+        "title": "LEGAL",
+        "body": "",
+        "accordion": [
+          {
+            "parent": "2",
+            "id": "2-1",
+            "title": "CAPITALIZATION TABLES",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "2",
+            "id": "2-8",
+            "title": "CAPITALIZATION TABLES [TEST]",
+            "body": "",
+            "accordion": [
+              {
+                "parent": "1-2",
+                "id": "1-2-1",
+                "title": "Child 2-3",
+                "body": "",
+                "accordion": [
+                  {
+                    "parent": "1-2-1",
+                    "id": "1-3-2",
+                    "title": "Sub Child 1",
+                    "body": "Sub Child Text",
+                    "accordion": []
+                  },
+                  {
+                    "parent": "1-2-1",
+                    "id": "1-3-1",
+                    "title": "Sub Child 2",
+                    "body": "Sub Child Text",
+                    "accordion": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "parent": "2",
+            "id": "2-2",
+            "title": "EQUITY TRANSACTIONS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "2",
+            "id": "2-3",
+            "title": "INTELLECTUAL PROPERTY PROTECTION",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "2",
+            "id": "2-4",
+            "title": "BUSINESS FORMATION",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          }
+        ]
+      },
+      {
+        "parent": "0",
+        "id": "3",
+        "title": "ACCOUNTING & BOOKKEEPING",
+        "body": "",
+        "accordion": [
+          {
+            "parent": "3",
+            "id": "3-1",
+            "title": "CASH FLOW ANALYSIS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "3",
+            "id": "3-10",
+            "title": "CASH FLOW ANALYSIS [TEST]",
+            "body": "",
+            "accordion": [
+              {
+                "parent": "1-2",
+                "id": "1-2-1",
+                "title": "Child 2-3",
+                "body": "",
+                "accordion": [
+                  {
+                    "parent": "1-2-1",
+                    "id": "1-3-2",
+                    "title": "Sub Child 1",
+                    "body": "Sub Child Text",
+                    "accordion": []
+                  },
+                  {
+                    "parent": "1-2-1",
+                    "id": "1-3-1",
+                    "title": "Sub Child 2",
+                    "body": "Sub Child Text",
+                    "accordion": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "parent": "3",
+            "id": "3-2",
+            "title": "VIRTUAL OR FRACTIONAL CFO (CHIEF FINANCIAL OFFICER)",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "3",
+            "id": "3-3",
+            "title": "FINANCIAL REPORTING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "3",
+            "id": "3-4",
+            "title": "BOOKKEEPING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "3",
+            "id": "3-5",
+            "title": "FORENSIC ACCOUNTING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          }
+        ]
+      },
+      {
+        "parent": "0",
+        "id": "4",
+        "title": "AUDIT",
+        "body": "",
+        "accordion": [
+          {
+            "parent": "4",
+            "id": "4-1",
+            "title": "FINANCIAL AUDITS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "4",
+            "id": "4-2",
+            "title": "INFORMATION SYSTEMS AUDITS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "4",
+            "id": "4-3",
+            "title": "COMPLIANCE AUDITS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "4",
+            "id": "4-4",
+            "title": "INVESTIGATIONS",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          }
+        ]
+      },
+      {
+        "parent": "0",
+        "id": "5",
+        "title": "CYBER SECURITY",
+        "body": "",
+        "accordion": [
+          {
+            "parent": "5",
+            "id": "5-1",
+            "title": "SOC 2 COMPLIANCE",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>"
+          },
+          {
+            "parent": "5",
+            "id": "5-2",
+            "title": "VIRTUAL CISO (CHIEF INFORMATION SERVICES OFFICER)",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "5",
+            "id": "5-3",
+            "title": "CYBER SECURITY CONSULTING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "5",
+            "id": "5-4",
+            "title": "CMMC COMPLIANCE",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "5",
+            "id": "5-5",
+            "title": "PENETRATION TESTING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "5",
+            "id": "5-6",
+            "title": "MANAGED DETECTION AND RESPONSE (MDR)",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          },
+          {
+            "parent": "5",
+            "id": "5-7",
+            "title": "NETWORK SECURITY MONITORING",
+            "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+            "accordion": []
+          }
+        ]
+      }
+    ];
+    // JSON END ( remember to remove the ";" when copying)
+    let levelsDeep = 0;
+    let startItemText = '<!-- Start Parent Accordion  --> <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed ';
+    let accordionBody = '';
+
+    function loopCall(arrayA) {
+      for (let i in arrayA) {
+        accordionBody += startItemText;
+        let bodyID = arrayA[i].id;
+        console.log(arrayA[i].body != '');
+        if (arrayA[i].body != '') {
+          accordionBody += 'hasBody" type="button" data-bs-toggle="collapse" ';
+        } else {
+          accordionBody += '" type="button" data-bs-toggle="collapse" ';
+        }
+        ids = 'data-bs-target="#bodycontainer-' + bodyID + '" aria-expanded="false" aria-controls="#bodycontainer-' + bodyID + '"> <!-- Accordion Title -->';
+
+        accordionBody += ids + arrayA[i].title + '</button></h2>';
+        accordionBody += '<div id="bodycontainer-' + bodyID + '" class="accordion-collapse collapse" data-bs-parent="#bodycontainer-' + arrayA[i].parent + '"><!-- Accordion Parent Body --><div class="accordion-body">';
+        if (arrayA[i].accordion != 0) {
+          levelsDeep++;
+          loopCall(arrayA[i].accordion);
+
+        } else {
+          accordionBody += "<div class='onlyBody'>";
+          accordionBody += arrayA[i].body;
+          accordionBody += "</div></div></div></div><!-- body Wrap --!>";
+        }
+      }
+      accordionBody += '</div></div></div><!-- End Accordion Parent Body -->'
+    }
+
+    loopCall(accordionList);
+    document.getElementById("bodycontainer-0").innerHTML = accordionBody;
+  </script>
+
+
+</body>
+
+</html>

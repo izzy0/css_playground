@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Just For centering  */
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+        }
+        /* ---- ---- ---- */
+    
+    .pulse-btn{
+        text-align: center;
+        padding: 12px 25px;
+        color: #fff;
+        border-radius: 5px;
+        background: #2735d5;
+        box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.8);
+        animation: pulsing 1.72s infinite cubic-bezier(0.66, 0, 0, 1);
+    }   
+    
+    @keyframes pulsing {
+        to {
+            box-shadow: 0 0 0 30px rgba(255, 249, 230, 0);
+        }
+    }
+
+    </style>
+</head>
+<body>
+   <div class="pulse-btn">
+    BUTTON
+   </div>
+</body>
+</html>

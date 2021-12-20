@@ -16,10 +16,13 @@
             align-items: center;
             height: 800px;
         }
+        body > div {
+            padding: 70px auto;
+        }
 
         /* ---- circle clip ---- */
 
-        .clip-card-container {
+        .clip-img-container {
             position: relative;
             clip-path: circle(50px);
             transition: all 1s ease;
@@ -30,11 +33,11 @@
             background-size: contain;
         }
 
-        .clip-card-container:hover {
+        .clip-img-container:hover {
             clip-path: circle(100%);
         }
 
-        .clip-text {
+        .clip-img-text {
             padding: 30px;
             border-radius: 5px;
             color: #fff;
@@ -84,7 +87,7 @@
             background: #f2f2f2;
         }
 
-        .clip-card-container-2 {
+        .clip-plain-card-container {
             position: relative;
             clip-path: circle(35px at 10px 10px);
             transition: all 1s ease;
@@ -94,11 +97,11 @@
             background-size: cover;
         }
 
-        .plain-card:hover .clip-card-container-2 {
+        .plain-card:hover .clip-plain-card-container {
             clip-path: circle(100%);
         }
 
-        .card-details {
+        .card-plain-details {
             padding: 30px;
             font-weight: bold;
             font-size: 1vw;
@@ -155,12 +158,124 @@
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
         }
+
+            /* ----------- Card 4 ------------ */
+        .plain-card-4 {
+            position: relative;
+            border-radius: 10px;
+            background: #f2f2f2;
+            /* text-align: center; */
+            width: 300px;
+            height: 350px;
+        }
+
+        .clip-plain-card-container-4 {
+            position: absolute;
+            clip-path: circle(30px at 7% 8%);
+            transition: all 1s ease;
+            top: 0;
+            border-radius: 5px;
+            background: #e14237;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .clip-plain-card-container-2-4 {
+            position: absolute;
+            clip-path: circle(35px at 95% 95%);
+            transition: all 1s ease;
+            top: 0;
+            border-radius: 5px;
+            background: #3d6be1;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .outer-clip-details-4 {
+            font-weight: bold;
+            font-size: 2vw;
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px 35px;
+            color: #353535;
+            z-index: 10;
+            transition: all .2s ease-in-out;
+        }
+        .number {
+            position: absolute;
+            top: 2px;
+            left: 14px;
+            color: #fff;
+        }
+
+        .plain-card-4:hover .clip-plain-card-container-4 {
+            clip-path: circle(80%);
+
+        } 
+        .plain-card-4:hover .clip-plain-card-container-2-4 {
+            clip-path: circle(65% at 90% 80%);
+        }
+
+        .plain-card-4:hover .outer-clip-details-4 {
+            color: #fff;
+        }
+
+        /* ----------- Card 5 ------------ */
+        .plain-card-5 {
+            position: relative;
+            border-radius: 10px;
+            background: #f2f2f2;
+            /* text-align: center; */
+            width: 300px;
+            height: 350px;
+        }
+
+        .clip-plain-card-container-5 {
+            position: absolute;
+            clip-path: circle(30px at 7% 8%);
+            transition: all 1s ease;
+            top: 0;
+            border-radius: 5px;
+            background: #e14237;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .outer-clip-details-5 {
+            font-weight: bold;
+            font-size: 2vw;
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px 35px;
+            color: #353535;
+            z-index: 10;
+            transition: all .2s ease-in-out;
+        }
+        .number-2 {
+            position: absolute;
+            top: 2px;
+            left: 14px;
+            color: #fff;
+        }
+
+        .plain-card-5:hover .clip-plain-card-container-5 {
+            clip-path: circle(80%);
+
+        } 
+
+        .plain-card-5:hover .outer-clip-details-5 {
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
-    <div class="clip-card-container">
-        <div class="clip-text">
+    <div class="clip-img-container">
+        <div class="clip-img-text">
             Some Text
         </div>
     </div>
@@ -173,8 +288,8 @@
     </a>
     <!--  -->
     <div class="plain-card">
-        <div class="clip-card-container-2">
-            <div class="card-details">
+        <div class="clip-plain-card-container">
+            <div class="card-plain-details">
                 I have some details here.
             </div>
         </div>
@@ -190,7 +305,28 @@
             </div>
         </div>
     </div>
+ <!--  -->
 
+    <div class="plain-card-4">
+        <div class="outer-clip-details-4">
+            <div class="number">1</div>
+            Research
+        </div>
+        <div class="clip-plain-card-container-4"></div>
+        <div class="clip-plain-card-container-2-4"></div>
+    </div>
+
+<!--  -->
+
+<div class="plain-card-5">
+    <div class="outer-clip-details-5">
+        <div class="number-2">1</div>
+        Research
+    </div>
+    <div class="clip-plain-card-container-5"></div>
+</div>
+
+<!--  -->
 </body>
 
 </html>

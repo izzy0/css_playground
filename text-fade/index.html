@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Just For centering  */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 800px;
+    }
+
+    /* ---- ---- ---- */
+
+    .fade-card {
+      position: relative;
+      width: 300px;
+      height:450px;
+      max-height: 600px;
+      border-radius:5px;
+      overflow:hidden;
+    }
+
+    .fade-card-container {
+      position:relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .fade-card img {
+      width:100%;
+      height:450px;
+    }
+
+    .fade-card-front, .fade-card-back {
+      transition: all 1s ease;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .fade-card-back {
+      padding: 30px 25px;
+      opacity:0;
+    }
+
+    .fade-card:hover .fade-card-back {
+      opacity: 1;
+    }
+
+    .fade-card:hover .fade-card-front {
+      opacity: 0;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="fade-card">
+    <div class="fade-card-container">
+      <div class="fade-card-front">
+        <img src="../img.png">
+      </div>
+      <div class="fade-card-back">
+        <h4>Image Title</h4>
+        <p>Space Rock</p>
+        <p>Outer Space Rock</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

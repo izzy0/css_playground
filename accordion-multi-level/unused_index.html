@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            /* font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px; */
+            max-width: 800px;
+            margin: 0 auto;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        #collapse-1 {
+            text-decoration: none;
+        }
+
+        .panel-title>a {
+            display: block;
+            position: relative;
+        }
+
+        .panel-title>a:after {
+            content: "\f078";
+            /* fa-chevron-down */
+            font-family: 'FontAwesome';
+            position: absolute;
+            right: 0;
+        }
+
+        .panel-title>a[aria-expanded="true"]:after {
+            content: "\f077";
+            /* fa-chevron-up */
+        }
+
+        .panel-heading {
+            
+            border-bottom: 1px solid #5f6368 !important;
+            color: #000 !important;
+
+        }
+
+        .panel-heading a {
+            text-decoration: none !important;
+            color: #000000;
+            font-family: 'Montserrat';
+            font-variant: normal;
+            font-weight: 500;
+            vertical-align: baseline;
+            font-size: 30.0pt;
+
+
+            text-transform: uppercase !important;
+        }
+
+        .panel-heading h4 {
+
+            color: #000000;
+            font-family: 'Montserrat';
+            font-variant: normal;
+            font-weight: 500;
+            vertical-align: baseline;
+            font-size: 30.0pt;
+
+
+            text-transform: uppercase !important;
+        }
+
+        .panel-heading-sub h4 {
+
+            color: #000000;
+            font-family: 'Montserrat';
+            font-variant: normal;
+            font-weight: 500;
+            vertical-align: baseline;
+            font-size: 16.0pt;
+
+
+            text-transform: uppercase !important;
+        }
+
+        .panel-body {
+            border: 0px !important;
+        }
+
+        .panel-group .panel {
+            border-radius: 0px !important;
+            border: 0px;
+
+        }
+
+        .hs-arrow-block {
+            display: block;
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 1;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .panel-title>a:after {
+            content: none !important;
+        }
+
+        .panel-title {
+            cursor: pointer;
+        }
+
+        .hsup .hs-arrs {
+            transform: rotate(180deg);
+        }
+
+        .panel {
+            background-color: transparent !important;
+        }
+
+        .panel-default>.panel-heading {
+            padding: 50px 8px !important;
+
+            background-color: rgba(240, 240, 240, 1);
+
+        }
+
+        .panel-default .panel-default .panel-heading {
+            padding: 14px 8px !important;
+            padding-right: 48px !important;
+            background-color: rgba(240, 240, 240, 1);
+            padding-top: 35px !important;
+
+        }
+
+        .panel-group {
+            background-color: rgba(240, 240, 240, 1);
+            padding-bottom: 30px;
+            margin-bottom: 0px;
+        }
+
+        .panel-body p {
+            line-height: 25px;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!----------------------  Tax ----------------------------->
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-1">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1"
+                            aria-expanded="false" aria-controls="collapse-1">
+                            Tax
+                            <div class="hs-arrow-block">
+
+                                <svg class="hs-arrs" data-position="down" width="24" height="24" viewBox="0 0 24 24"
+                                    focusable="false" class="arr-down">
+                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                </svg>
+
+
+                            </div>
+
+                        </a>
+
+
+                    </h4>
+                </div>
+                <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                    <div class="panel-body">
+
+                        <!--------- 179D Energy Tax Deduction ----------->
+
+                        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-1">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion-1"
+                                            href="#collapse-1-1" aria-expanded="false" aria-controls="collapse-1-1">
+                                            179D Energy Tax Deduction
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-1" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-1">
+                                    <div class="panel-body">
+                                        <div class="panel-group" id="accordion-1-1" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel-body">
+                                                <p><span id="TAKE ASSESSMENT"><a
+                                                            href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                                ASSESSMENT</strong></a></span><br>
+                                                    <br>
+                                                    <strong>Brief Description:</strong> <br>
+                                                    <strong>Benefit:</strong> <br>
+                                                    <strong>ROI:</strong> <br>
+                                                    <strong>Utilization Schedule:</strong> <br>
+                                                    <strong>Fee:</strong> <br>
+                                                    <strong>Fee Schedule:</strong> <br>
+                                                    <strong>Customer Commitment:</strong> <br>
+                                                    <strong>Other Customer Costs:</strong> <br>
+                                                    <strong>Risks:</strong> <br>
+                                                    <strong>Risk Timing:</strong> <br>
+                                                    <strong>Process:</strong> <br>
+                                                    <strong>Common Industries:</strong> <br>
+                                                    <strong>Authorities For Further Research:</strong> <br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--------- 179D Energy Tax Deduction (For Contractors, Engineers, Architects, etc.) ----------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-1" href="#collapse-1-2" aria-expanded="false"
+                                            aria-controls="collapse-1-2">
+                                            179D Energy Tax Deduction (For Contractors, Engineers, Architects, etc.)
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-2" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-2">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--------- IRS Audit Monitoring ----------->
+
+                                <div class="panel panel-default" style="margin-top: 5px;">
+                                    <div class="panel-heading-sub" role="tab" id="heading-1-3">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-1-3" aria-expanded="false"
+                                                aria-controls="collapse-1-3">
+                                                IRS Audit Monitoring
+                                                <div class="hs-arrow-block">
+
+                                                    <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                        viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                        <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                    </svg>
+
+
+                                                </div>
+
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1-3" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading-1-3">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--------- IRS Penalty Abatement ----------->
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading-sub" role="tab" id="heading-1-4">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-1-4" aria-expanded="false"
+                                                aria-controls="collapse-1-4">
+                                                IRS Penalty Abatement
+                                                <div class="hs-arrow-block">
+
+                                                    <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                        viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                        <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                    </svg>
+
+
+                                                </div>
+
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1-4" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading-1-4">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--------- Cost Segregation ----------->
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading-sub" role="tab" id="heading-1-5">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-1-5" aria-expanded="false"
+                                                aria-controls="collapse-1-5">
+                                                Cost Segregation
+                                                <div class="hs-arrow-block">
+
+                                                    <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                        viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                        <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                    </svg>
+
+
+                                                </div>
+
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1-5" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading-1-5">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--------- 45L Energy Tax Credit ----------->
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading-sub" role="tab" id="heading-1-6">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-1-6" aria-expanded="false"
+                                                aria-controls="collapse-1-6">
+                                                45L Energy Tax Credit
+                                                <div class="hs-arrow-block">
+
+                                                    <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                        viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                        <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                    </svg>
+
+
+                                                </div>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1-6" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading-1-6">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--------- Tax Controversy & Disputes ----------->
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading-sub" role="tab" id="heading-1-7">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordion-1" href="#collapse-1-7" aria-expanded="false"
+                                                aria-controls="collapse-1-7">
+                                                Tax Controversy & Disputes
+                                                <div class="hs-arrow-block">
+
+                                                    <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                        viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                        <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                    </svg>
+
+
+                                                </div>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-1-7" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="heading-1-7">
+                                        <div class="panel-body">
+                                            <p><span id="TAKE ASSESSMENT"><a
+                                                        href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                            ASSESSMENT</strong></a></span><br>
+                                                <br>
+                                                <strong>Brief Description:</strong> <br>
+                                                <strong>Benefit:</strong> <br>
+                                                <strong>ROI:</strong> <br>
+                                                <strong>Utilization Schedule:</strong> <br>
+                                                <strong>Fee:</strong> <br>
+                                                <strong>Fee Schedule:</strong> <br>
+                                                <strong>Customer Commitment:</strong> <br>
+                                                <strong>Other Customer Costs:</strong> <br>
+                                                <strong>Risks:</strong> <br>
+                                                <strong>Risk Timing:</strong> <br>
+                                                <strong>Process:</strong> <br>
+                                                <strong>Common Industries:</strong> <br>
+                                                <strong>Authorities For Further Research:</strong> <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+        <!--------------------------- Legal -------------------------->
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-2">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2"
+                            aria-expanded="false" aria-controls="collapse-2">
+
+                            Legal
+
+                            <div class="hs-arrow-block">
+
+                                <svg class="hs-arrs" data-position="down" width="24" height="24" viewBox="0 0 24 24"
+                                    focusable="false" class="arr-down">
+                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                </svg>
+
+
+                            </div>
+
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                    <div class="panel-body">
+
+                        <!---------------- Capitalization Tables ----------------->
+
+                        <div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-8">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion-2"
+                                            href="#collapse-1-8" aria-expanded="false" aria-controls="collapse-1-8">
+                                            Capitalization Tables
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-8" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-8">
+                                    <div class="panel-body">
+
+                                        <div class="panel-group" id="accordion-1-2" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <p><span id="TAKE ASSESSMENT"><a
+                                                                href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                                    ASSESSMENT</strong></a></span><br>
+                                                        <br>
+                                                        <strong>Brief Description:</strong> <br>
+                                                        <strong>Benefit:</strong> <br>
+                                                        <strong>ROI:</strong> <br>
+                                                        <strong>Utilization Schedule:</strong> <br>
+                                                        <strong>Fee:</strong> <br>
+                                                        <strong>Fee Schedule:</strong> <br>
+                                                        <strong>Customer Commitment:</strong> <br>
+                                                        <strong>Other Customer Costs:</strong> <br>
+                                                        <strong>Risks:</strong> <br>
+                                                        <strong>Risk Timing:</strong> <br>
+                                                        <strong>Process:</strong> <br>
+                                                        <strong>Common Industries:</strong> <br>
+                                                        <strong>Authorities For Further Research:</strong> <br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!---------------- Equity Transactions ----------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-9">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-2" href="#collapse-1-9" aria-expanded="false"
+                                            aria-controls="collapse-1-9">
+                                            Equity Transactions
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-9" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-9">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- Intellectual Property Protection ------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-10">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-2" href="#collapse-1-10" aria-expanded="false"
+                                            aria-controls="collapse-1-10">
+                                            Intellectual Property Protection
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-10" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-10">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- Business Formation ------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-11">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-2" href="#collapse-1-11" aria-expanded="false"
+                                            aria-controls="collapse-1-11">
+                                            Business Formation
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-11" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-11">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        </div>
+        </div>
+
+
+        <!------------------- Accounting & Bookkeeping --------------------->
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-3">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3"
+                            aria-expanded="false" aria-controls="collapse-3">
+                            Accounting & Bookkeeping
+
+                            <div class="hs-arrow-block">
+
+                                <svg class="hs-arrs" data-position="down" width="24" height="24" viewBox="0 0 24 24"
+                                    focusable="false" class="arr-down">
+                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                </svg>
+
+
+                            </div>
+
+
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+                    <div class="panel-body">
+
+                        <!------------- Cash Flow Analysis ---------------->
+
+                        <div class="panel-group" id="accordion-3" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-12">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion-3"
+                                            href="#collapse-1-12" aria-expanded="false" aria-controls="collapse-1-12">
+                                            Cash Flow Analysis
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-12" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-12">
+                                    <div class="panel-body">
+
+                                        <div class="panel-group" id="accordion-1-12" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel-body">
+                                                <p><span id="TAKE ASSESSMENT"><a
+                                                            href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                                ASSESSMENT</strong></a></span><br>
+                                                    <br>
+                                                    <strong>Brief Description:</strong> <br>
+                                                    <strong>Benefit:</strong> <br>
+                                                    <strong>ROI:</strong> <br>
+                                                    <strong>Utilization Schedule:</strong> <br>
+                                                    <strong>Fee:</strong> <br>
+                                                    <strong>Fee Schedule:</strong> <br>
+                                                    <strong>Customer Commitment:</strong> <br>
+                                                    <strong>Other Customer Costs:</strong> <br>
+                                                    <strong>Risks:</strong> <br>
+                                                    <strong>Risk Timing:</strong> <br>
+                                                    <strong>Process:</strong> <br>
+                                                    <strong>Common Industries:</strong> <br>
+                                                    <strong>Authorities For Further Research:</strong> <br>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- Virtual or Fractional CFO (Chief Financial Officer) ---------------->
+
+                            <div class="panel panel-default">
+
+
+                                <div class="panel-heading-sub" role="tab" id="heading-1-13">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-3" href="#collapse-1-13" aria-expanded="false"
+                                            aria-controls="collapse-1-13">
+                                            Virtual or Fractional CFO (Chief Financial Officer)
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-13" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-13">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------------ Financial Reporting ----------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-14">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-3" href="#collapse-1-14" aria-expanded="false"
+                                            aria-controls="collapse-1-14">
+                                            Financial Reporting
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-14" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-14">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------------ Bookkeeping ----------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-15">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-3" href="#collapse-1-15" aria-expanded="false"
+                                            aria-controls="collapse-1-15">
+                                            Bookkeeping
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-15" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-15">
+
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----------------- Forensic Accounting ---------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-16">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-3" href="#collapse-1-16" aria-expanded="false"
+                                            aria-controls="collapse-1-16">
+                                            Forensic Accounting
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-16" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-16">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+        <!---------------------------- Audit ----------------------------->
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-4">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4"
+                            aria-expanded="false" aria-controls="collapse-4">
+                            Audit
+                            <div class="hs-arrow-block">
+
+                                <svg class="hs-arrs" data-position="down" width="24" height="24" viewBox="0 0 24 24"
+                                    focusable="false" class="arr-down">
+                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                </svg>
+
+
+                            </div>
+
+                        </a>
+                    </h4>
+
+
+                </div>
+                <div id="collapse-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-4">
+                    <div class="panel-body">
+
+                        <!--------------- Financial Audits ----------------->
+
+                        <div class="panel-group" id="accordion-4" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-17">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion-4"
+                                            href="#collapse-1-17" aria-expanded="false" aria-controls="collapse-1-17">
+                                            Financial Audits
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-17" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-17">
+                                    <div class="panel-body">
+
+                                        <div class="panel-group" id="accordion-1-17" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel-body">
+                                                <p><span id="TAKE ASSESSMENT"><a
+                                                            href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                                ASSESSMENT</strong></a></span><br>
+                                                    <br>
+                                                    <strong>Brief Description:</strong> <br>
+                                                    <strong>Benefit:</strong> <br>
+                                                    <strong>ROI:</strong> <br>
+                                                    <strong>Utilization Schedule:</strong> <br>
+                                                    <strong>Fee:</strong> <br>
+                                                    <strong>Fee Schedule:</strong> <br>
+                                                    <strong>Customer Commitment:</strong> <br>
+                                                    <strong>Other Customer Costs:</strong> <br>
+                                                    <strong>Risks:</strong> <br>
+                                                    <strong>Risk Timing:</strong> <br>
+                                                    <strong>Process:</strong> <br>
+                                                    <strong>Common Industries:</strong> <br>
+                                                    <strong>Authorities For Further Research:</strong> <br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- Information Systems Audits --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-18">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-4" href="#collapse-1-18" aria-expanded="false"
+                                            aria-controls="collapse-1-18">
+                                            Information Systems Audits
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-18" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-18">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!------------- Compliance Audits --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-19">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-4" href="#collapse-1-19" aria-expanded="false"
+                                            aria-controls="collapse-1-19">
+                                            Compliance Audits
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-19" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-19">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- Investigations --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-20">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-4" href="#collapse-1-20" aria-expanded="false"
+                                            aria-controls="collapse-1-20">
+                                            Investigations
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-20" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-20">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+        <!------------------------ Cyber Security ------------------------->
+
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-5">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-5"
+                            aria-expanded="false" aria-controls="collapse-5">
+                            Cyber Security
+
+                            <div class="hs-arrow-block">
+
+                                <svg class="hs-arrs" data-position="down" width="24" height="24" viewBox="0 0 24 24"
+                                    focusable="false" class="arr-down">
+                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                </svg>
+
+
+                            </div>
+
+
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-5">
+                    <div class="panel-body">
+
+                        <!------------------ SOC 2 Compliance ----------------->
+
+                        <div class="panel-group" id="accordion-5" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-21">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion-5"
+                                            href="#collapse-1-21" aria-expanded="false" aria-controls="collapse-1-21">
+                                            SOC 2 Compliance
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-21" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-21">
+                                    <div class="panel-body">
+
+                                        <div class="panel-group" id="accordion-1-21" role="tablist"
+                                            aria-multiselectable="true">
+                                            <div class="panel-body">
+                                                <p><span id="TAKE ASSESSMENT"><a
+                                                            href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                                ASSESSMENT</strong></a></span><br>
+                                                    <br>
+                                                    <strong>Brief Description:</strong> <br>
+                                                    <strong>Benefit:</strong> <br>
+                                                    <strong>ROI:</strong> <br>
+                                                    <strong>Utilization Schedule:</strong> <br>
+                                                    <strong>Fee:</strong> <br>
+                                                    <strong>Fee Schedule:</strong> <br>
+                                                    <strong>Customer Commitment:</strong> <br>
+                                                    <strong>Other Customer Costs:</strong> <br>
+                                                    <strong>Risks:</strong> <br>
+                                                    <strong>Risk Timing:</strong> <br>
+                                                    <strong>Process:</strong> <br>
+                                                    <strong>Common Industries:</strong> <br>
+                                                    <strong>Authorities For Further Research:</strong> <br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  Virtual CISO (Chief Information Services Officer) --->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-22">
+
+
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-22" aria-expanded="false"
+                                            aria-controls="collapse-1-22">
+                                            Virtual CISO (Chief Information Services Officer)
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-22" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-22">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- Cyber Security Consulting --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-23">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-23" aria-expanded="false"
+                                            aria-controls="collapse-1-19">
+                                            Cyber Security Consulting
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-23" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-23">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- CMMC Compliance --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-24">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-24" aria-expanded="false"
+                                            aria-controls="collapse-1-24">
+                                            CMMC Compliance
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+
+
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-24" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-24">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------- Penetration Testing --------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-25">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-25" aria-expanded="false"
+                                            aria-controls="collapse-1-25">
+                                            Penetration Testing
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-25" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-25">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------- Managed Detection and Response (MDR) --------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-26">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-26" aria-expanded="false"
+                                            aria-controls="collapse-1-26">
+                                            Managed Detection and Response (MDR)
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-26" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-26">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------ Network Security Monitoring ------------->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading-sub" role="tab" id="heading-1-27">
+                                    <h4 class="panel-title">
+
+
+                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion-5" href="#collapse-1-27" aria-expanded="false"
+                                            aria-controls="collapse-1-27">
+                                            Network Security Monitoring
+
+                                            <div class="hs-arrow-block">
+
+                                                <svg class="hs-arrs" data-position="down" width="24" height="24"
+                                                    viewBox="0 0 24 24" focusable="false" class="arr-down">
+                                                    <path d="M5.41 7.59L4 9l8 8 8-8-1.41-1.41L12 14.17"></path>
+                                                </svg>
+
+
+                                            </div>
+
+
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-1-27" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading-1-27">
+                                    <div class="panel-body">
+                                        <p><span id="TAKE ASSESSMENT"><a
+                                                    href="https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D"><strong>TAKE
+                                                        ASSESSMENT</strong></a></span><br>
+                                            <br>
+                                            <strong>Brief Description:</strong> <br>
+                                            <strong>Benefit:</strong> <br>
+                                            <strong>ROI:</strong> <br>
+                                            <strong>Utilization Schedule:</strong> <br>
+                                            <strong>Fee:</strong> <br>
+                                            <strong>Fee Schedule:</strong> <br>
+                                            <strong>Customer Commitment:</strong> <br>
+                                            <strong>Other Customer Costs:</strong> <br>
+                                            <strong>Risks:</strong> <br>
+                                            <strong>Risk Timing:</strong> <br>
+                                            <strong>Process:</strong> <br>
+                                            <strong>Common Industries:</strong> <br>
+                                            <strong>Authorities For Further Research:</strong> <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            $(".panel-heading").on("click", function () {
+
+
+
+                var elm = $(this).find("a");
+
+
+                var svgElm = $(this).find(".hs-arrow-block");
+
+
+
+                if ($(svgElm).hasClass("hsup")) {
+
+                    svgElm.removeClass("hsup");
+
+                }
+                else {
+
+                    svgElm.addClass("hsup");
+
+                }
+
+
+            });
+
+        </script>
+
+
+
+
+
+                <!-- Start Child Accordion  -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#subAccordionBodyContainer" aria-expanded="false"
+                            aria-controls="subAccordionBodyContainer">
+                            <!-- Accordion Title -->
+                            Child Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="subAccordionBodyContainer" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionBodyContainer">
+                        <div class="accordion-body">
+                            <!-- Accordion Body -->
+                            <!-- Start Sub Child Accordion  -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#subAccordionBodyContainer" aria-expanded="false"
+                                        aria-controls="subAccordionBodyContainer">
+                                        <!-- Accordion Title -->
+                                        Sub Accordion Item #1
+                                    </button>
+                                </h2>
+                                <div id="accordionBodyContainer" class="accordion-collapse collapse"
+                                    data-bs-parent="#subAccordionBodyContainer">
+                                    <div class="accordion-body">
+                                        <!-- Accordion Body -->
+                                        Placeholder content for this accordion, which is intended to demonstrate the
+                                        <code>.accordion-flush</code> class. This is the first item's accordion body.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Sub Child Accordion  -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Child Accordion  -->
+
+    </body>
+
+</html>

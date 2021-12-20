@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lp-contents {
+  max-width: 1100px;
+  position: relative;
+  display: flex;
+}
+
+.laptop {
+  position: relative;
+  width: 800px;
+}
+.computer-screen {
+  position: absolute;
+  top: 35px;
+  left: 125px;
+  overflow: hidden;
+  width: 861px;
+  height: 400px;
+  border-radius: 9px;
+  top: 5%;
+    left: 11%;
+    width: 79%;
+}
+.webpage {
+    z-index: 90;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    width: 100%;
+    transition: all 7s;
+    -o-transition: all 7s;
+    -ms-transition: all 7s;
+    -moz-transition: all 7s;
+    -webkit-transition: all 7s;
+}
+.webpage:hover {
+    cursor: pointer;
+    margin-top: -936px;
+}
+.lp-contents img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="lp-contents">
+    <div class="computer-screen">
+      <div class="webpage"><img src="page.png" alt=""></div>
+    </div>
+    <div class="laptop"><img src="laptop.png" alt=""></div>
+  </div>
+
+
+</body>
+</html>
