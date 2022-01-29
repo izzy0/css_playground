@@ -2,4 +2,4 @@
 
 Just a playground for cool CSS effects
 
-Visit web-snippets.com to see them in action! 
+Visit https://web-snippets.com to see them in action! 
