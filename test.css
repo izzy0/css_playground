@@ -150,26 +150,26 @@
   #banner {
     background-position-x: right;
   }
-  
+
   .category-post-list-container {
     width:100%;
   }
-  
+
   .post-list-item {
     width: 200px;
   }
 }
 
 @media screen and (max-width: 568px) {
-  
+
   .category-post-list {
   	justify-content: center;
   }
-  
+
    .post-list-item {
     width: 100%;
   }
-  
+
   #library-title {
   	font-size: 22px;
   }
@@ -210,14 +210,14 @@
 .product-card {
 	flex-direction: column;
     /* width: 230px; */
-    background: #EDEDED;  
+    background: #EDEDED;
   	padding-top: 0;
     margin: 0 10px 25px 10px;
   	transition: ease 0.4s;
   	box-shadow: 0 0px 0px #fff;
   	border-radius: 10px;
   	overflow: hidden;
-}  
+}
 
 .product-card:hover {
 	box-shadow: 0 8px 15px #161f4452;
@@ -230,4 +230,136 @@
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+
+
+/* CFA DASHBOARD */
+.hl_header--controls .btn {
+	background-color: #BFD730;
+	border-color: none;
+	color: #000;
+}
+.hl_header--controls .btn:hover {
+	background-color: #000;
+}
+.hl_header--controls #hl_header--help-icon {
+	background: #BFD730;
+}
+.hl_header--controls #hl_header--help-icon .fa-question {
+	color:#000 !important;
+}
+.hl_header--controls .hl_header--dropdown .avatar_img {
+	background-color: #BFD730 !important;
+	color:#000;
+}
+.hl_header {
+	border-bottom: none;
+	background: #003D68;
+}
+.hl_header .filter-option-inner {
+	color:#8EE1D6 !important;
+	font-size:20px;
+}
+.hl_header--picker>.btn.dropdown-toggle:after {
+	color:#8EE1D6 !important;
+	font-size:15px;
+}
+.hl_header--picker>.btn.dropdown-toggle {
+	background: transparent !important;
+}
+.hl_wrapper {
+	background: #EFEEEF !important;
+}
+.hl_controls h1 {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 31px !important;
+  line-height: 61px;
+	color: #003D68;
+}
+.hl_controls .processing-stats {
+	color: #003D68 !important;
+	height: 28px;
+	top: -6px;
+	position: relative;
+}
+.card {
+	border-radius: 6px !important;
+}
+.card-header {
+	border-bottom: none;
+	border-radius: 6px !important;
+}
+.card-group:first-child .card:nth-child(even), .card-group:first-child .card:nth-child(even) .card-header {
+	background: #B2E2E5;
+	color: #003D68;
+
+}
+.card-group:first-child .card:nth-child(odd), .card-group:first-child .card:nth-child(odd) .card-header {
+	background: #9ED7FF;
+	color: #003D68;
+}
+.container-fluid > .card-group:first-child .card-body h3 {
+	font-weight: 800;
+	color: #0d3d68;
+}
+.bottom-stats li {
+	border-radius: 20px;
+	padding: 0 20px;
+	margin-bottom: 5px;
+}
+.bottom-stats li:first-child {
+	background: #37ca37a8;
+}
+.bottom-stats li:nth-child(2) {
+	background: #ffbc009e;
+}
+.bottom-stats li:last-child {
+	background: #e93d3da8;
+}
+.bottom-stats li span {
+	color: #000 !important;
+}
+/* CFA LOGIN */
+
+/* CFA ANIMATION */
+.lds-grid div:first-child {
+  background-image: url(https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif);
+	position: relative;
+	z-index: 90;
+
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 3s;
+	-moz-transition-property: -moz-transform background-color;
+	-moz-transition-duration: 3s;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: grow;
+	-moz-animation-duration: 6s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+}
+.lds-grid {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+	border-radius: none !important;
+  animation: none !important;
+}
+.lds-grid div:nth-child(n+2) {
+	display: none;
+}
+
+@-webkit-keyframes grow {
+0% { transform: scale(1); }
+50% { transform: scale(4); }
+100% { transform: scale(1); }
 }

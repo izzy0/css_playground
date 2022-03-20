@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mb {
+            margin-bottom:1000px;
+        }
+        .my-tags {
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: azure;
+        }
+        .my-tags a {
+            transition: all 1.4s ease;
+            text-decoration: none;
+            color: #000;
+        }
+        .my-tags a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-content">
+        <div class="my-tags">
+            <ul></ul>
+        </div>
+        <p class="mb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+        <h3 >Tag 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+        <h3 >Tag 2.2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+
+        <h3 >Tag 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //get ids from content and place them into the left nav
+            let menuList = '';
+            let link = "";
+            let tagNum = 0;
+            const preTagId = 'tag-';
+            let tagID;
+            //makes sure url doesnt have any anchors
+            let url = window.location.toString();
+            url = url.split('#')[0];
+
+
+            $('#page-content').prepend('<div class="my-tags"><ul></ul></div>');
+
+            //gets all ids from the content page and adds them to a map as html a tags
+            let arr = $("#page-content h3").map(function () {
+                tagID = preTagId + tagNum;
+                $(this).addClass('tag-links');
+                $(this).attr('id', tagID);
+                link = '<a id= "'+ tagNum + '" class="nav-link" href="' + url + '#' + tagID + '">' + this.textContent + '</a>';
+                tagNum ++;
+                return link;
+            });
+
+            //adds links to the left nav
+            $.each(arr, function (i, item) {
+                menuList = menuList.concat('<li class="nav-item">' + item + '</li>');
+            });
+
+            $('.my-tags ul').prepend(menuList);
+
+            $('.my-tags a').on('click', function (event) {
+                $('.my-tags').find('a').parent().removeClass('tag-active');
+                $(this).parent().addClass('tag-active');
+            });
+
+            $(window).on('scroll', function () {
+                $('.tag-link').each(function () {
+                    if ($(window).scrollTop() + 350 >= $(this).offset().top) {
+                        var id = $(this).attr('id');
+                        $('.my-tags a').parent().removeClass('tag-active');
+                        $('.my-tags a[id="' + id + '"]').parent().addClass('tag-active');
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

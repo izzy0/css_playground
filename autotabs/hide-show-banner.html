@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .aff-banner {
+            padding: 20px;
+            text-align: center;
+            background-color: blanchedalmond;
+            font-size:16px;
+            width: 100%;
+            height: fit-content;
+        }
+        .menu-header{
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-header"></div>
+    <div id="page-content">
+        <div class="my-tags affliate">
+            <ul></ul>
+        </div>
+        <p class="mb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+        <h3 >Tag 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+        <h3 >Tag 2.2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+
+        <h3 >Tag 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perferendis aspernatur, quasi in consectetur
+            esse tenetur tempore aperiam corrupti eum consequatur distinctio debitis iusto saepe deleniti officiis
+            explicabo voluptatibus reprehenderit!</p>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+           if($('.affliate').length){
+               $('#masthead').insertAfter(
+                   '<div class="aff-banner">' +
+                   'This is an affliate post.'+
+                   '</div>');
+           }
+
+        });
+
+    </script>
+</body>
+
+</html>

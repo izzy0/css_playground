@@ -1,0 +1,79 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- /* remove animation */ -->
+<script type="text/javascript">
+    $('.lds-grid').empty();
+    // $('.app-loader').empty();
+</script>
+
+<!-- /* dynamic loading logo */ -->
+<script type="text/javascript">
+    var defaultLogoImage = "https://firebasestorage.googleapis.com/v0/b/highlevel-backend.appspot.com/o/companyPhotos%2FMbzQy42dCoj2rMvYPV1b.png?alt=media&token=50b02ad6-12af-4731-b183-2e48b05dec95"
+
+    var logoImageArray = [
+        {
+            imageURL: "https://someimageurl.com",
+            locationIds: ["hXiVON2Nt12ecs1VNfFrs"]
+        }, {
+            imageURL: "https://someimageurl.com",
+            locationIds: ["oIjPfa1viExasd28Z1atP3"]
+        }
+    ];
+    
+    // have defualt look of dashboard to locations in this array
+    var dashboardArray = ["bwDNKIKqYkFMB3v1LZBn"];
+
+    function addDashClass() {
+        $(document).ready(function () {
+            $("body").on('DOMSubtreeModified', "#app header", function () {
+                console.log('adder');
+                    for (var i = 0; dashboardArray.length; i++) {
+                    var show = true;
+                    var currentLocation = window.location.pathname.split('/')[2];
+                    show = dashboardArray[i].includes(currentLocation) ? false : true;
+                    if (!show) {
+                        if ($("body").hasClass("dashchange")){
+                            $("body").removeClass('dashchange');
+                        }
+                        break;
+                    }else {
+                        $("body").addClass('dashchange');
+                    }
+                    };
+            });
+        });
+    }
+
+    function customLogos() {
+        $(document).ready(function () {
+            $("body").on('DOMSubtreeModified', "#app header", function () {
+                $.each(logoImageArray, function (index, image) {
+                    var imageDiv = $(".hl_navbar--logo img");
+                    var show = false;
+                    if (window.location.pathname.includes('location') && !show) {
+                        var currentLocation = window.location.pathname.split('/')[2];
+                        show = image.locationIds.includes(currentLocation) ? true : false;
+                    }
+
+                    if (show) {
+                        imageDiv.attr("src", image.imageURL);
+                        return false;
+                    } else if (!show) {
+                        imageDiv.attr("src", defaultLogoImage)
+                    }
+                })
+            });
+        });
+    }
+    if (typeof jQuery == 'undefined' || typeof $ !== 'undefined') {
+        var headTag = document.getElementsByTagName("head")[0];
+        var jqTag = document.createElement('script');
+        jqTag.type = 'text/javascript';
+        jqTag.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js';
+        jqTag.onload = customLogos;
+        headTag.appendChild(jqTag);
+        console.log("here")
+    } else {
+        customLogos();
+    }
+    addDashClass();
+</script>

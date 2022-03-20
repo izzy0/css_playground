@@ -1,0 +1,408 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<div class="accordion accordion-flush" id="bodycontainer-0">
+</div>
+
+<style>
+  #bodycontainer-0 {
+    height: 600px;
+  }
+
+  .accordion-header,
+  .accordion-item,
+  .accordion-button,
+  #bodycontainer-0,
+  #userHtmlFrame,
+  body {
+    background: #F0F0F0;
+  }
+
+  .accordion-button {
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+  }
+
+  /* header styles */
+  .accordion-header button {
+    text-decoration: none !important;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-variant: normal;
+    font-weight: 500;
+    vertical-align: baseline;
+    font-size: 30.0pt;
+    text-transform: uppercase !important;
+  }
+
+  /* sub header styles */
+  .accordion-body .accordion-header .accordion-button {
+    font-size: 16px;
+  }
+
+  /* plus sign */
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+  }
+
+  /* dropdown arrow  */
+  .hasBody:after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  }
+
+  /* minus sign */
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M0 10h24v4h-24z'/%3E%3C/svg%3E");
+  }
+
+  .onlyBody {
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 0 0 10px 10px;
+    font-family: 'Montserrat';
+  }
+
+  .accordion-body {
+    padding-top: 0;
+  }
+
+  @media (max-width:768px) {
+    .accordion-header button {
+      font-size: 20px;
+    }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JSON Start ( copy from everything in and including the "[ ... ]" ) 
+  const accordionList = [
+    {
+      "parent": "0",
+      "id": "1",
+      "title": "Tax",
+      "body": "",
+      "accordion": [
+        {
+          "parent": "1",
+          "id": "1-1",
+          "title": "179D ENERGY TAX DEDUCTION",
+          "body": "<div class=\"d-flex justify-content-between px-4\"><a class=\"btn btn-primary\" href=\"https://www.rbundle.com/services-list/179d-energy-deduction\" > Access Eligibility </a><a class=\"btn btn-primary\" href=\"https://drive.google.com/uc?export=download&id=undefined\" target=\"_blank\"> <i class=\"fa-solid fa-download\"></i> Download RFP Form </a></div><br><br><p><strong>Brief Description:</strong> A federal tax deduction of up to $1.80 per square foot of the building given to owners of commercial buildings for reduction or energy and power costs below certain standard (e.g. ASHRAE 90.1-2007).<br> \n<strong>Benefit:</strong> Increased Federal tax deduction which increases cashflow or Net Operating Losses.<br> \n<strong>ROI:</strong> Median ranges from 5:1 to 10:1.<br> \n<strong>Utilization Schedule:</strong> Federal tax benefit realized at time of federal tax payment or, in the case of Net Operating Losses, in the year(s) in which the loss created by the deduction is applied.<br> \n<strong>Fee:</strong> See ROI.<br> \n<strong>Fee Schedule:</strong> Provider dependent. Typical arrangements include (1) Full payment up front, (2) Progress payments, and (3) Full payment upon completion. Depending on the time of year, payments usually occur before benefit is realized.<br> \n<strong>Customer Commitment:</strong> Provide service provider with building drawings and specifications, costs associated with the purchase or construction of the building, allow for a site visit and access to building utility systems that typically is less than a day (requires a contact/representative on site), and contact with tax preparer.<br> \n<strong>Risks:</strong> This is a relatively low risk tax position. Low audit rates and easy to prove if audited.<br> \n<strong>Risk Timing:</strong> This tax deduction is not currently a red flag to the IRS so audits of this claims would most likely happen, if at all, 2-3 years from the date filed.<br> \n<strong>Process:</strong>Provide documentary information listed above, arrange and execute site visit, service provider calculates benefit (and maybe delivers a report), the building owner signs off on the facts supporting the benefit, then the deduction is added to the tax return and filed. Tax returns can be amended to claim this benefit as well.<br> \n<strong>Common Industries:</strong> Manufacturing and Commercial Development. Not restricted ot any industry, just need an energy efficient building.<br> \n<strong>Authorities For Further Research:</strong> Title 26 USC §179D for original law. Consolidated Appropriations Act, 2021 makes the law permanent. There are various Internal Revenue Bulletins, Public Laws, IRS Memoranda, and IRS Notices that update and change the provisions of the original law.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-2",
+          "title": "179D ENERGY TAX DEDUCTION (FOR CONTRACTORS, ENGINEERS, ARCHITECTS, ETC.)",
+          "body": "<div class=\"d-flex justify-content-between px-4\"><a class=\"btn btn-primary\" href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179DPrimaryDesigner\" > Access Eligibility </a><a class=\"btn btn-primary\" href=\"https://drive.google.com/uc?export=download&id=undefined\" target=\"_blank\"> <i class=\"fa-solid fa-download\"></i> Download RFP Form </a></div><p><br> <br> <strong>Brief Description:</strong> A federal tax deduction of up to $1.80 per square foot of to the primary designer(s) of commercial buildings for whose energy and power specification meet or exceed a certain standard (e.g. ASHRAE 90.1-2007).<br> \n<strong>Benefit:</strong> Increased Federal tax deduction which increases cashflow or Net Operating Losses.<br> \n<strong>ROI:</strong> Median ranges from 5:1 to 10:1.<br> \n<strong>Utilization Schedule:</strong> Federal tax benefit realized at time of federal tax payment or, in the case of Net Operating Losses, in the year(s) in which the loss created by the deduction is applied.<br> \n<strong>Fee:</strong> See ROI.<br> \n<strong>Fee Schedule:</strong> Provider dependent. Typical arrangements include (1) Full payment up front, (2) Progress payments, and (3) Full payment upon completion. Depending on the time of year, payments usually occur before benefit is realized.<br> \n<strong>Customer Commitment:</strong> Provide service provider with building drawings and specifications, costs associated with the purchase or construction of the building, allow for a site visit and access to building utility systems that typically is less than a day (requires a contact/representative on site), and contact with tax preparer.<br> \n<strong>Risks:</strong> This is a relatively low risk tax position. Low audit rates and easy to prove if audited.<br> \n<strong>Risk Timing:</strong> This tax deduction is not currently a red flag to the IRS so audits of this claims would most likely happen, if at all, 2-3 years from the date filed.<br> \n<strong>Process:</strong>Provide documentary information listed above, arrange and execute site visit, service provider calculates benefit (and maybe delivers a report), the building owner signs off on the facts supporting the benefit, then the deduction is added to the tax return and filed. Tax returns can be amended to claim this benefit as well.<br> \n<strong>Common Industries:</strong> Manufacturing and Commercial Development. Not restricted ot any industry, just need an energy efficient building.<br> \n<strong>Authorities For Further Research:</strong> Internal Revenue Code §179D for original law. Consolidated Appropriations Act, 2021 makes the law permanent. There are various Internal Revenue Bulletins, Public Laws, IRS Memoranda, and IRS Notices that update and change the provisions of the original law.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-3",
+          "title": "IRS AUDIT MONITORING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessmentIRSAuditMonitoring\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> Monitor of a business’s IRS account for either code changes input by the IRS that indicate forthcoming audits, tax liens, or other adverse IRS actions. The service also monitors certain taxpayer submissions to the IRS to check for irregularities to be corrected (e.g. missed payroll tax filings).<br> \n<strong>Benefit:</strong> Early detections of filing irregularities and IRS actions can save the business interest, penalties, forfeitures, liens, as well as significant time and stress.<br> \n<strong>Utilization Schedule:</strong> <br> \n<strong>Fee: </strong>  Typically flat fee.<br> \n<strong>Fee Schedule:</strong>  Typically paid upfront for monitoring over a given time period.<br> \n<strong>Customer Commitment:</strong>  Business signs an IRS Form 2848, usually prepared by the provider.<br> \n<strong>Risks:</strong>  None. The Form 2848 nor the monitoring of a business’s IRS increases any risk of adverse action from the IRS or otherwise flag the account for any additional scrutiny.<br> \n<strong>Risk Timing:</strong>  N/A.<br> \n<strong>Process:</strong> Business provides service provider the necessary information to complete IRS Form 2848. Service provider prepares the IRS Form 2848 and the business signs it. IRf Form 2848 is submitted to the IRS to give service provider access to business’s IRs tax account for monitoring.<br> \n<strong>Common Industries:</strong>  All.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-4",
+          "title": "IRS PENALTY ABATEMENT",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessmentIRSPenaltyAbatement\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> Recover or reduce IRS penalties as far back as 2001 for failing to file a tax return, pay on time, and/or to deposit taxes when due.<br> \n<strong>Benefit:</strong> Refund from the IRS or reduction in penalty balance due to the IRS.<br> \n<strong>Utilization Schedule:</strong> Reductions of penalty balances due occur immediately. IRS refunds can take between 2 weeks and 6 months.<br> \n<strong>Fee: </strong>  Typically 5%-30% of the value recovered. If negotiated, usually the larger the recovery the lower percentage paid.<br> \n<strong>Fee Schedule:</strong> Depends on the Business’s financial circumstances as well as the size of the recovery. Typically, smaller recoveries require payment upfront while larger recoveries split invoices, 1 to start the service and 1 at the complete of the service or upon actual recovery by the Business.<br> \n<strong>Customer Commitment:</strong>  Business signs an IRS Form 2848, usually prepared by the provider.<br> \n<strong>Risks:</strong>  there are two timing risks. First, if a penalty is still accruing, the service does not stop more penalties from accruing, it only abates previously accrued penalties. For example, if the Business is late on paying their Federal income taxes they are accruing penalties for failure to pay. If the penalties already accrued are abated before the Business pays its Federal income taxes, then failure to pay penalties will continue to accrue after the abatement. In this case, the taxes should be paid first, then the Business should seek abatement of the penalty. The second timing risk is choosing which year to request. Typically, except for particular circumstances, penalty abatements must occur at least 3 years apart. So if the Business is expecting to incur a larger penalty this year then they have in the three previous years, then the Business should wait until the penalty for this year has accrued and seek abatement for the largest penalty within a 4 year period.<br> \n<strong>Process:</strong> Business provides service provider the necessary information to complete IRS Form 2848. Service provider prepares the IRS Form 2848 and the business signs it. IRf Form 2848 is submitted to the IRS to give service provider access to business’s IRs tax account for investigation into penalty abatement opportunities. Once identified, the service provider often presentes those opportunities to the Business, negotiates a fee, then contacts the IRS on the Business’s behalf to negotiate for the penalty abatement.<br> \n<strong>Common Industries:</strong>  All.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-5",
+          "title": "COST SEGREGATION",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessmentCostSegregation\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> Accelerate the depreciation of buildings owned by the business (on balance sheet). Commercial buildings are most often depreciated evenly over a 39 year period. With Cost Segregation, depreciation from future years can often be reallocated closer in time to present. <br> \n<strong>Benefit:</strong> Increased Federal tax deduction which increases cashflow or Net Operating Losses.<br> \n<strong>ROI:</strong> Varies widely, with most falling between 10:1 and 50:1<br> \n<strong>Utilization Schedule:</strong> Benefit realized at the time of tax payment and often for the 5 - 7 subsequent years. <br> \n<strong>Fee: </strong>  See ROI.<br> \n<strong>Fee Schedule:</strong>  Provider dependent. Typical arrangements include (1) Full payment up front, (2) Progress payments, and (3) Full payment upon completion. Depending on the time of year, payments usually occur before benefit is realized.<br> \n<strong>Customer Commitment:</strong> Business provides service provider with address of the building, specifications and drawings of the building, and the tax asset schedule from the most recent return or building costs for new constructions. Business also facilitates a site visit by the service provider.<br> \n<strong>Risks:</strong>  Cost Segregation is a low risk tax position with low audit rates. Risk exposure occurs when Cost Segregation positions are either (1) not supported by documentation or (2) the segregation of building costs is incorrect.<br> \n<strong>Risk Timing:</strong> This tax deduction is not currently a red flag to the IRS so audits of this claims would most likely happen, if at all, 2-3 years from the date filed.<br> \n<strong>Process:</strong>  Business provides service provider with documentation, site visit to building(s), cost segregation report delivered, and tax return filed.<br> \n<strong>Common Industries:</strong>  Manufacturing and Commercial Development. Not restricted ot any industry, just need an energy efficient building.<br> \n<strong>Authorities For Further Research:</strong> Internal Revenue Code §167; IRS Publication 946; IRS Cost Segregation Audit Techniques Guide; Revenue Procedure (Rev. Proc.) 62-21, 1962-2 C.B. 418.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-6",
+          "title": "RESEARCH AND DEVELOPMENT TAX CREDIT (FEDERAL)",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessmentRDTaxCreditFederal\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> Federal tax credit for businesses who make technical improvements to products, processes, computer software, techniques, formulas, or inventions.<br> \n<strong>Benefit:</strong> A tax refund, reduction of tax liability, or deferred tax asset equal to approximately 6% - 20% of research and development costs in a given year. For some businesses, the credit can be applied against the employer portion of payroll taxes.<br> \n<strong>ROI:</strong> Typically between 3:1 and 6:1<br> \n<strong>Utilization Schedule:</strong> Reduction of tax liability is realized at the time on tax payment. Tax refunds often take between 3 to 9 months from filing. Deferred tax assets are recorded upon completion of the service. Payroll tax reduction realized as soon as the first quarter after filing the credit.<br> \n<strong>Fee: </strong>  See ROI.<br> \n<strong>Fee Schedule:</strong> Provider dependent. Typical arrangements include (1) Full payment up front, (2) Progress payments, and (3) Full payment upon completion. Depending on the time of year, payments usually occur before benefit is realized.<br> \n<strong>Customer Commitment:</strong> Business provides service provider with tax returns, general ledger details, profit & loss statements, W-2s, 1099-MISCs / NECs, R&D related contracts, and R&D workpapers for, at minimum, the year in which R&D is to be claimed and the 3 prior years. In some cases, the service provider will interview Business owners and employees involved in and familiar with the R&D; this maybe occur remotely or in-person on site at the business.<br> \n<strong>Other Customer Costs:</strong>  Lack of responsiveness and organization by the Business or lack of preparedness, expertise, or diligence by the service provider can increase the organizational time and energy required to complete the service.<br> \n<strong>Risks:</strong> The IRS has increased scrutiny for certain R&D tax credits that come from unlikely businesses or outside the range of normal for the industry. Improper claims can result in forfeiture of the credit, additional interest, and penalties.<br> \n<strong>Risk Timing:</strong>  Audits most likely happen, if at all, 1-3 years from the date filed.<br> \n<strong>Process:</strong> Business provides service provider with requested documentation. Service provider speaks with requested personnel at the Business. Service provider calculates the credit and delivers substantiating report. Tax credit claimed on tax return and/or amended tax return filed to claim refund.<br> \n<strong>Common Industries:</strong> Automotive, Consumer goods, Aviation & Aerospace, Retail & eCommerce, Food & Beverages, Medical devices, Biotechnology, Oil & Energy, Financial services, Telecommunications, Renewables & Environment, Apparel & Fashion, Logistics & Supply Chain, Craft beer companies, Cannabis companies, Farmers & agriculture, Advertising/Marketing analytics, and Logistics.<br> \n<strong>Authorities For Further Research:</strong> Internal Revenue Code §41; Audit Techniques Guide: Credit for Increasing Research Activities.<br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "1",
+          "id": "1-7",
+          "title": "TAX CONTROVERSY & DISPUTES",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        }
+      ]
+    },
+    {
+      "parent": "0",
+      "id": "2",
+      "title": "LEGAL",
+      "body": "",
+      "accordion": [
+        {
+          "parent": "2",
+          "id": "2-1",
+          "title": "CAPITALIZATION TABLES",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "2",
+          "id": "2-8",
+          "title": "CAPITALIZATION TABLES [TEST]",
+          "body": "",
+          "accordion": [
+            {
+              "parent": "1-2",
+              "id": "1-2-1",
+              "title": "Child 2-3",
+              "body": "",
+              "accordion": [
+                {
+                  "parent": "1-2-1",
+                  "id": "1-3-2",
+                  "title": "Sub Child 1",
+                  "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+                  "accordion": []
+                },
+                {
+                  "parent": "1-2-1",
+                  "id": "1-3-1",
+                  "title": "Sub Child 2",
+                  "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+                  "accordion": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parent": "2",
+          "id": "2-2",
+          "title": "EQUITY TRANSACTIONS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "2",
+          "id": "2-3",
+          "title": "INTELLECTUAL PROPERTY PROTECTION",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "2",
+          "id": "2-4",
+          "title": "BUSINESS FORMATION",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        }
+      ]
+    },
+    {
+      "parent": "0",
+      "id": "3",
+      "title": "ACCOUNTING & BOOKKEEPING",
+      "body": "",
+      "accordion": [
+        {
+          "parent": "3",
+          "id": "3-1",
+          "title": "CASH FLOW ANALYSIS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "3",
+          "id": "3-10",
+          "title": "CASH FLOW ANALYSIS [TEST]",
+          "body": "",
+          "accordion": [
+            {
+              "parent": "1-2",
+              "id": "1-2-1",
+              "title": "Child 2-3",
+              "body": "",
+              "accordion": [
+                {
+                  "parent": "1-2-1",
+                  "id": "1-3-2",
+                  "title": "Sub Child 1",
+                  "body": "Sub Child Text",
+                  "accordion": []
+                },
+                {
+                  "parent": "1-2-1",
+                  "id": "1-3-1",
+                  "title": "Sub Child 2",
+                  "body": "Sub Child Text",
+                  "accordion": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "parent": "3",
+          "id": "3-2",
+          "title": "VIRTUAL OR FRACTIONAL CFO (CHIEF FINANCIAL OFFICER)",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "3",
+          "id": "3-3",
+          "title": "FINANCIAL REPORTING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "3",
+          "id": "3-4",
+          "title": "BOOKKEEPING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "3",
+          "id": "3-5",
+          "title": "FORENSIC ACCOUNTING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        }
+      ]
+    },
+    {
+      "parent": "0",
+      "id": "4",
+      "title": "AUDIT",
+      "body": "",
+      "accordion": [
+        {
+          "parent": "4",
+          "id": "4-1",
+          "title": "FINANCIAL AUDITS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "4",
+          "id": "4-2",
+          "title": "INFORMATION SYSTEMS AUDITS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "4",
+          "id": "4-3",
+          "title": "COMPLIANCE AUDITS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "4",
+          "id": "4-4",
+          "title": "INVESTIGATIONS",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        }
+      ]
+    },
+    {
+      "parent": "0",
+      "id": "5",
+      "title": "CYBER SECURITY",
+      "body": "",
+      "accordion": [
+        {
+          "parent": "5",
+          "id": "5-1",
+          "title": "SOC 2 COMPLIANCE",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>"
+        },
+        {
+          "parent": "5",
+          "id": "5-2",
+          "title": "VIRTUAL CISO (CHIEF INFORMATION SERVICES OFFICER)",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "5",
+          "id": "5-3",
+          "title": "CYBER SECURITY CONSULTING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "5",
+          "id": "5-4",
+          "title": "CMMC COMPLIANCE",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "5",
+          "id": "5-5",
+          "title": "PENETRATION TESTING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "5",
+          "id": "5-6",
+          "title": "MANAGED DETECTION AND RESPONSE (MDR)",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        },
+        {
+          "parent": "5",
+          "id": "5-7",
+          "title": "NETWORK SECURITY MONITORING",
+          "body": "<p><span id=\"TAKE ASSESSMENT\"><a href=\"https://www.cognitoforms.com/Rbundle/EligibilityAssessment179D\"><strong>TAKE ASSESSMENT</strong></a></span><br> <br> <strong>Brief Description:</strong> <br> <strong>Benefit:</strong> <br> <strong>ROI:</strong> <br> <strong>Utilization Schedule:</strong> <br> <strong>Fee:</strong> <br> <strong>Fee Schedule:</strong> <br> <strong>Customer Commitment:</strong> <br> <strong>Other Customer Costs:</strong> <br> <strong>Risks:</strong> <br> <strong>Risk Timing:</strong> <br> <strong>Process:</strong> <br> <strong>Common Industries:</strong> <br> <strong>Authorities For Further Research:</strong> <br></p>",
+          "accordion": []
+        }
+      ]
+    }
+  ];
+  // JSON END ( remember to remove the ";" when copying)
+  let levelsDeep = 0;
+  let startItemText = '<!-- Start Parent Accordion  --> <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed ';
+  let accordionBody = '';
+
+  function loopCall(arrayA) {
+    for (let i in arrayA) {
+      accordionBody += startItemText;
+      let bodyID = arrayA[i].id;
+      console.log(arrayA[i].body != '');
+      if (arrayA[i].body != '') {
+        accordionBody += 'hasBody" type="button" data-bs-toggle="collapse" ';
+      } else {
+        accordionBody += '" type="button" data-bs-toggle="collapse" ';
+      }
+      ids = 'data-bs-target="#bodycontainer-' + bodyID + '" aria-expanded="false" aria-controls="#bodycontainer-' + bodyID + '"> <!-- Accordion Title -->';
+
+      accordionBody += ids + arrayA[i].title + '</button></h2>';
+      accordionBody += '<div id="bodycontainer-' + bodyID + '" class="accordion-collapse collapse" data-bs-parent="#bodycontainer-' + arrayA[i].parent + '"><!-- Accordion Parent Body --><div class="accordion-body">';
+      if (arrayA[i].accordion != 0) {
+        levelsDeep++;
+        loopCall(arrayA[i].accordion);
+
+      } else {
+        accordionBody += "<div class='onlyBody'>";
+        accordionBody += arrayA[i].body;
+        accordionBody += "</div></div></div></div><!-- body Wrap --!>";
+      }
+    }
+    accordionBody += '</div></div></div><!-- End Accordion Parent Body -->'
+  }
+
+  loopCall(accordionList);
+  document.getElementById("bodycontainer-0").innerHTML = accordionBody;
+</script>

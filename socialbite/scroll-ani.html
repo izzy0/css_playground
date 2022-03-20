@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        /* HERO */
+        .hero-container {
+            margin: 0 auto;
+            max-width: 800px;
+            height: 200vh;
+        }
+
+        .hero-img {
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .hero-img img {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 90;
+        }
+
+        .hero-key {
+            width: 210px;
+            position: absolute;
+            left: 60px;
+            z-index: 1;
+            top: -180px;
+        }
+
+        .hero-popup {
+            transition: all ease-in-out 0.4s;
+            width: 150px;
+            position: absolute;
+            left: 21%;
+            z-index: 0;
+        }
+
+        .pop {
+            width: 310px;
+        }
+
+        .hero-circle {
+            position: absolute;
+            background: rgba(239, 223, 255, 0.612);
+            background: radial-gradient(circle, rgba(165, 182, 249, 0.687) 0%, rgba(251, 176, 241, 0) 70%);
+            border-radius: 150px;
+            width: 180px;
+            height: 180px;
+            z-index: 0;
+        }
+
+        .hero-img-container {
+            position: relative;
+            /* max-width: 800px; */
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 760px) {
+            .hero-popup {
+                left: 400px;
+            }
+
+            .hero-key {
+                left: -58px;
+                z-index: 1;
+                top: 270px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-hero">
+        <div class="hero-container">
+            <h1 class="has-text-align-center has-text-color" style="color:#2640cd">Connect in ONE Tap!</h1>
+            <p>Welcome to modern networking with virtual business cards. Have all your social networks, website,
+                payments all in one spot! </p>
+            <p>Create an account and start connecting today!</p>
+            <div class="wp-block-buttons is-content-justification-right register-hm-btn">
+                <div
+                    class="wp-block-button has-custom-width wp-block-button__width-50 has-custom-font-size is-style-fill home-signup has-small-font-size">
+                    <a class="wp-block-button__link has-background" href="https://socialbite.co/register/"
+                        style="background-color:#2640cd">Sign up for free</a>
+                </div>
+            </div>
+            <div class="hero-img-container">
+                <div class="hero-key"><img src="./SB-Keychain.png" alt=""></div>
+                <div class="hero-circle"></div>
+                <div class="hero-img"><img src="./sb-phone.png" alt=""></div>
+                <div class="hero-popup"><img src="./popup.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="scroll.js"></script>
+</body>
+
+</html>

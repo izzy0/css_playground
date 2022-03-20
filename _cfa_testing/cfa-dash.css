@@ -1,0 +1,299 @@
+.lds-grid div, .lds-grid {
+    display: none !important;
+}
+
+/* CFA DASHBOARD */
+body.dashchange .hl_header--controls .btn {
+    background-color: #BFD730;
+    border-color: none;
+    color: #000;
+}
+
+body.dashchange .hl_header--controls .btn:hover {
+    background-color: #000;
+}
+
+body.dashchange .hl_header--controls #hl_header--help-icon {
+    background: #BFD730;
+}
+
+body.dashchange .hl_header--controls #hl_header--help-icon .fa-question {
+    color: #000 !important;
+}
+
+body.dashchange .hl_header--controls .hl_header--dropdown .avatar_img {
+    background-color: #BFD730 !important;
+    color: #000;
+}
+
+body.dashchange .hl_header {
+    border-bottom: none;
+    background: #003D68;
+}
+
+body.dashchange .hl_header .filter-option-inner {
+    color: #ffffff !important;
+    font-size: 15px;
+}
+
+body.dashchange .hl_header--picker>.btn.dropdown-toggle:after {
+    color: #ffffff !important;
+
+}
+
+body.dashchange .hl_header--picker>.btn.dropdown-toggle {
+    background: transparent !important;
+}
+
+body.dashchange .hl_wrapper {
+    background: #EFEEEF !important;
+}
+
+body.dashchange .hl_controls h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px !important;
+    line-height: 61px;
+    color: #003D68;
+}
+
+body.dashchange .hl_controls .processing-stats {
+    color: #003D68 !important;
+    height: 28px;
+    top: -6px;
+    position: relative;
+}
+
+body.dashchange .card {
+    border-radius: 6px !important;
+}
+
+body.dashchange .card-header {
+    border-bottom: none;
+    border-radius: 6px !important;
+}
+
+body.dashchange .card-group:first-child .card:nth-child(even), body.dashchange .card-group:first-child .card:nth-child(even) .card-header {
+    background: #B2E2E5;
+    color: #003D68;
+}
+
+body.dashchange .card-group:first-child .card:nth-child(odd), body.dashchange .card-group:first-child .card:nth-child(odd) .card-header {
+    background: #9ED7FF;
+    color: #003D68;
+}
+
+body.dashchange .card-group:first-child .card-body h3 {
+    font-weight: 800;
+    color: #0d3d68;
+}
+
+body.dashchange .bottom-stats li {
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-bottom: 5px;
+}
+
+body.dashchange .bottom-stats li:first-child {
+    background: #37ca37a8;
+}
+
+body.dashchange .bottom-stats li:nth-child(2) {
+    background: #ffbc009e;
+}
+
+body.dashchange .bottom-stats li:last-child {
+    background: #e93d3da8;
+}
+
+body.dashchange .bottom-stats li span {
+    color: #000 !important;
+}
+
+
+/* LOGIN */
+:root {
+    --login-button-background-color: #003D68;
+    --login-button-background-hover-color: #fff;
+    --main-body-background-color: linear-gradient(168deg, rgba(157, 232, 211, 1) 39%, rgba(83, 198, 212, 1) 85%);
+    --input-box-background-color: #fff;
+    --login-heading-color: #ffffff;
+    --login-button-text-color: #fff;
+    --login-button-text-color-hover: #000;
+    --login-icon-color: #02b0ac;
+    --login-error-text-color: rgb(255, 16, 16);
+    --login-input-label-color: #fff;
+    --login-otp-text-color: #fff;
+    --login-forgot-password-text-color: #000;
+    --login-footer-text-color: #fff;
+    --login-footer-link-color: rgb(0, 0, 0);
+}
+
+.hl_login {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    margin-top: 0px !important;
+    height: 100vh;
+    background: var(--main-body-background-color);
+}
+
+.hl_login--header {
+    background: #fff0 !important;
+    border-bottom: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0px !important;
+    display: flex;
+}
+
+.hl_login--header img {
+    max-height: 160px !important;
+}
+
+.hl-text-input-container .space-x-3, .hl-btn::before {
+    display: none;
+}
+
+div.hl_login--body {
+    max-width: 550px !important;
+    width: 100% !important;
+
+    border-radius: 10px !important;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    padding-left: 30px;
+}
+
+.hl_login--body .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0);
+}
+
+.hl_login--body .card .card-body {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.hl_login .form-control {
+    background: var(--input-box-background-color) !important;
+    font-size: 0.875rem;
+    color: #2a3135;
+    border: 1px solid #bdbdbd !important;
+    border-radius: 50px !important;
+    padding: 15px 10px !important;
+    box-shadow: inset 5px 0px 10px 1px rgba(0, 0, 0, 0.16);
+}
+
+.hl_login--body .login-card-heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hl_login--body .heading2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: var(--login-heading-color);
+    border-bottom: 3px solid #fff;
+    line-height: 3rem;
+
+    display: none;
+}
+
+.hl_login .button-holder.form-group {
+    margin: 10px auto !important;
+}
+
+.hl_login--body .heading2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.hl_login--body .form-group label {
+    display: none;
+}
+
+.hl_login--body .foot-note {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.hl_login--body a {
+    color: #02504e !important;
+}
+
+.hl_login--body div.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hl_login button {
+    background-color: var(--login-button-background-color);
+    color: var(--login-button-text-color);
+    min-height: 45px;
+    font-size: 25px;
+}
+
+.hl_login .hover\:bg-curious-blue-600:hover,
+.hl_login button:hover {
+    color: var(--login-button-text-color-hover) !important;
+    background-color: var(--login-button-background-hover-color) !important;
+}
+
+.hl_login #email-error {
+    color: var(--login-error-text-color);
+}
+
+.hl_login .hl-text-input-label {
+    color: var(--login-input-label-color);
+}
+
+.hl_login .font-semibold.cursor-pointer.text-curious-blue-500 {
+    color: var(--login-input-label-color);
+}
+
+.hl_login [for="otp-for-email"],
+.hl_login [for="otp-for-phone"] {
+    color: var(--login-otp-text-color);
+}
+
+.hl_login .forgot-password {
+    color: var(--login-forgot-password-text-color);
+}
+
+.hl_login .foot-note {
+    color: var(--login-footer-text-color);
+}
+
+.hl_login .foot-note a {
+    color: var(--login-footer-link-color);
+}
+
+/* CFA ANIMATION */
+
+.lds-grid {
+    background-image: url(https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif);
+    background-size: 50%;
+    background-postion: center;
+    position: relative;
+    width: 260px;
+    height: 260px;
+}

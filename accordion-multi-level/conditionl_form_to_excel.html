@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Forms</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Open Sans Condensed', sans-serif;
+            padding: 25px;
+            background: #f0f0f0;
+        }
+
+        .form-bg {
+            font-family: 'Open Sans Condensed', sans-serif;
+            background: #f0f0f0;
+        }
+
+        .form-group,
+        #table-history,
+        #notes-texts,
+        #download-table,
+        .error-msg,
+        .error-msg-2,
+        #download-table,
+        #notes,
+        #next-steps,
+        #body-error,
+        #show-options,
+        #temp-table {
+            display: none;
+        }
+
+        .show.error input {
+            border: 1px
+        }
+
+        .error-msg,
+        .error-msg-2 {
+            color: red;
+        }
+
+        .form-group.show,
+        #q1,
+        .show {
+            display: block !important;
+        }
+
+        #next-steps {
+            /* text-align: center; */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .title-text {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .form-group,
+        #notes {
+            margin-top: 10px;
+        }
+
+        #notes label {
+            font-weight: bold;
+        }
+
+        .form-group>label {
+            font-weight: bold;
+            font-size: 18;
+        }
+
+        .form-group>div label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16;
+            font-weight: bold;
+        }
+
+        .fa-circle-question {
+            font-size: 18px;
+            margin-left: 15px;
+            color: #6b6b6b;
+        }
+
+        #body-error p {
+            width: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        #show-options {
+            max-width: 250px;
+            position: relative;
+            right: 0;
+            margin: 10px 0;
+        }
+
+        .fa-download {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container form-bg">
+        <div class="row">
+            <div class="title-text">SERVICE ELIGIBILITY QUESTIONS</div>
+            <form id="main-form">
+                <div class="form-group" id="q1">
+                    <label for="tax-status">Does or should the business file income taxes in the U.S.?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true"
+                        title="If you file a U.S. Federal Income Tax Return, the answer is YES. If your business has not been filing U.S. Federal Income Tax Returns, consult a tax accountant or tax attorney.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="tax-status" id="tax-status_0" type="radio" required="required"
+                                class="custom-control-input" value="yes">
+                            <label for="tax-status_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="tax-status" id="tax-status_1" type="radio" required="required"
+                                class="custom-control-input" value="no">
+                            <label for="tax-status_1" class="custom-control-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="q2">
+                    <label for="tax-form-select-1">What Federal Income Tax Form does the business file?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true"
+                        title="Reference Tax Return, the number in the top left.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <select id="tax-form-select-1" name="tax-form-select-1" required="required"
+                            class="custom-select">
+                            <option value="">Select</option>
+                            <option value="1040 with Sch. C">1040 with Sch. C</option>
+                            <option value="1041">1041</option>
+                            <option value="1120S">1120S</option>
+                            <option value="1065">1065</option>
+                            <option value="1120">1120</option>
+                            <option value="1120-A">1120-A</option>
+                            <option value="1120-H">1120-H</option>
+                            <option value="1120-L">1120-L</option>
+                            <option value="1120-F">1120-F</option>
+                            <option value="1120-C">1120-C</option>
+                            <option value="1120-REIT">1120-REIT</option>
+                            <option value="990">990</option>
+                            <option value="990EZ">990EZ</option>
+                            <option value="990PF">990PF</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="q3">
+                    <label for="b-year-end">What is the business' year end?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="The tax year end is near the top of the first page of the form,
+                    under the title of the form, except for 1040s which are year end of 12/31.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <select id="b-year-end" name="b-year-end" class="custom-select" required="required">
+                            <option value="">Select</option>
+                            <option value="12/31">12/31</option>
+                            <option value="6/30">6/30</option>
+                            <option value="1/31">1/31</option>
+                            <option value="3/31">3/31</option>
+                            <option value="9/30">9/30</option>
+                            <option value="other"> Other </option>
+                            <!-- TODO hide other unless selected -->
+                            <!-- <input name="other-date" id="other-input" type="text" class="custom-control-input" placeholder="MM/DD"> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="q3-b">
+                    <label for="radio_part">If the business files as a Partnership, is the business currently subject to
+                        the BBA Centralized Partnership Audit Regime?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true"
+                        title="All partnerships are automatically subject to the BBA, unless the partnership has opted out in a given year. Opting out must be done every year to remain effective. Consult tax accountant for further questions.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_part" id="radio_part_0" type="radio" class="custom-control-input"
+                                value="yes" required="required">
+                            <label for="radio_part_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_part" id="radio_part_1" type="radio" class="custom-control-input"
+                                value="no" required="required">
+                            <label for="radio_part_1" class="custom-control-label">No</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_part" id="radio_part_3" type="radio" class="custom-control-input"
+                                value="unsure" required="required">
+                            <label for="radio_part_3" class="custom-control-label">Unsure</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="q3-c">
+                    <label for="radio_bba">If subject to the BBA, is the business able to provide the name of the
+                        company's Partnership Representative?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true"
+                        title="All partnerships subject to the BBA name a Partnership Representative in their 1065 filing. See page 3, below Line 29.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_bba" id="radio_bba_0" type="radio" class="custom-control-input"
+                                value="yes" required="required">
+                            <label for="radio_bba_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_bba" id="radio_bba_1" type="radio" class="custom-control-input"
+                                value="no" required="required">
+                            <label for="radio_bba_1" class="custom-control-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="q4">
+                    <label for="radio_ein">Can the business provide the business's EIN, Company Name, and Company
+                        Address?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="Reference Tax Return, information at the top of the first page of
+                    the tax return below the title of the form.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_ein" id="radio_ein_0" type="radio" class="custom-control-input"
+                                value="yes" required="required">
+                            <label for="radio_ein_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_ein" id="radio_ein_1" type="radio" class="custom-control-input"
+                                value="no" required="required">
+                            <label for="radio_ein_1" class="custom-control-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="q5">
+                    <label for="radio_b">Does the business also want its records searched for Penalty Abatement
+                        Opportunities?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="Penalty Abatement is a separate service from IRS Audit
+                    Monitoring. If a provider is already monitoring your IRS tax
+                    account for audits then the provider likley also has access to
+                    search for penalty abatement opportunities. Penalty Abatement
+                    services usually are charged as a percentage of the recovered
+                    amount. ">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_b" id="radio_0" type="radio" class="custom-control-input" value="yes"
+                                required="required">
+                            <label for="radio_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio_b" id="radio_1" type="radio" class="custom-control-input" value="no"
+                                required="required">
+                            <label for="radio_1" class="custom-control-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" id="q6">
+                    <label for="datepicker">What year was the business formed?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="Look on the top right of the tax return unless it’s a 1040, then
+                    reference the EIN Verification Letter (LTR 147C). If that letter is
+                    misplaced, call the IRS at 1-800-829-4933.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <input type="text" class="form-control" name="datepicker" id="datepicker" />
+                    <div class="error-msg"> Date must be in the past ( unless youre from the future )</div>
+                    <div class="error-msg-2"> How old is the company!? Range to wide!</div>
+                    <div></div>
+                </div>
+
+                <div class="form-group" id="q7">
+                    <label for="b-kind">What kind of legal entity is the business?</label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="Reference formation documents (e.g. Articles of Incorporation,
+                    Articles of Organization), or the Secretary of State's website for
+                    the state(s) that your business is registered in.">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <select id="b-kind" name="b-kind" class="custom-select" required="required">
+                            <option value="">Select</option>
+                            <option value="C-Corp.">C-Corp.</option>
+                            <option value="B-Corp.">B-Corp.</option>
+                            <option value="Closely Held Corporation">Closely Held Corporation</option>
+                            <option value="Public Benefit Corporation">Public Benefit Corporation</option>
+                            <option value="Professional Corporation ( PC )">Professional Corporation ( PC )</option>
+                            <option value="S-Corp.">S-Corp.</option>
+                            <option value="General Partnership ( GP )">General Partnership ( GP )</option>
+                            <option value="Limited Partnership ( LP )">Limited Partnership ( LP )</option>
+                            <option value="Limited Liability Partnership ( LLP )">Limited Liability Partnership ( LLP )
+                            </option>
+                            <option value="Limited Liability Limited Partnership ( LLLP )">Limited Liability Limited
+                                Partnership
+                                ( LLLP )</option>
+                            <option value="Limited Liability Company ( LLC, LC, Ltd. Co. )">Limited Liability Company (
+                                LLC, LC,
+                                Ltd. Co. )</option>
+                            <option value="Sole Proprietorship">Sole Proprietorship</option>
+                            <option value="Non-profit Corporation ">Non-profit Corporation</option>
+                            <option value="Trust">Trust</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="q8">
+                    <label for="radio1">Has the business always been a <span id="legal-entity-input"></span> filing a
+                        <span id="filing-entity-input"></span> with a tax year end of <span
+                            id="filing-end-input"></span>
+                    </label>
+                    <span data-bs-toggle="tooltip" data-bs-html="true" title="tool tip demo">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="yes">
+                            <label for="radio1_0" class="custom-control-label">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio form-check-inline">
+                            <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="no">
+                            <label for="radio1_1" class="custom-control-label">No</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
+                    <button name="submit" type="submit" class="btn btn-primary">Next</button>
+                </div> -->
+                <div id="body-error">
+                    <p>YOUR BUSINESS IS NOT ELIGIBILE FOR THIS SERVICE AT THIS TIME.</p>
+                </div>
+            </form>
+
+            <div id="table-history"></div>
+            <!-- <button id="show-options" class="btn btn-primary"
+                onclick=" ValidToPass(true, ['notes','download-table','next-steps'])">Continue</button> -->
+            <div id="notes">
+                <label for="notes-texts">OPTIONAL - PROVIDER NOTES</label>
+                <p>In box below, enter any additional information you think is relevant to providers to generate your
+                    service proposal.</p>
+                <textarea name="notes-texts" id="note-texts" style="width:100%;" rows="10"></textarea>
+            </div>
+            <!-- <button id="edit-table" class="btn btn-primary" onclick=" EditTable()"> Edit </button>
+            <button id="save-table" class="btn btn-primary" onclick=" SaveTable()"> Save </button> -->
+
+            <!-- <button id="download-table" class="btn btn-primary" onclick=" HtmlTOExcel('xls')"> Download To Excel
+            </button> -->
+            <button id="download-table" class="btn btn-primary" onclick=" ExportToExcel()"><i
+                    class="fa-solid fa-download"></i> Download To Excel
+            </button>
+            <!-- <button id="download-table" class="btn btn-primary" onclick=" ExportTable()"> Download </button> -->
+            <div id="temp-table"></div>
+            <div id="next-steps">
+                NEXT STEP – Download this form to excel. To request proposals, submit the downloaded form here:<br>
+                <a href="https://www.rbundle.com/rbundle-your-business/request-proposals"
+                    target="_blank">https://www.rbundle.com/rbundle-your-business/request-proposals</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="error-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Business Qualififcation</h5>
+
+                </div>
+                <div class="modal-body">
+                    <p>YOUR BUSINESS IS NOT ELIGIBILE FOR THIS SERVICE AT THIS TIME.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="CloseModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.min.js"></script>
+
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+
+    <!-- New JS Lib -->
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+
+
+    <script>
+        function ExportToExcel() {
+            ExportTable();
+            let table = document.querySelector("#temp-table");
+            TableToExcel.convert(table, { // html code may contain multiple tables so here we are refering to 1st table tag
+                name: `Tax - IRS Audit Monitoring.xlsx`, // fileName you could use any name
+                sheet: {
+                    name: 'Sheet 1' // sheetName
+                }
+            });
+        }
+
+        function HtmlTOExcel(type, fun, dl) {
+            ExportTable();
+            // call function to convert all inputs to values
+            var elt = document.getElementById('temp-table');
+            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+            return dl ?
+                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                XLSX.writeFile(wb, fun || ('Tax - IRS Audit Monitoring.' + (type || 'xlsx')));
+        }
+
+        function ExportTable() {
+
+            var tempTable = '<table><tr><td colspan="15" data-f-bold="true" data-f-italic="true" data-f-sz="28">RBUNDLE RFP FORM FOR</td></tr><tr><td></td></tr>';
+            var serialArry = $('#main-form').serializeArray();
+
+            tempTable += '<tr><td data-b-a-c="FFFF"</td></tr>';
+            tempTable += '<tr><td data-b-a-c="FFFFFF"></td></tr>';
+            tempTable += '<tr><td data-b-a-c="#FFFFFF"></td></tr>';
+
+            for (let index = 0; index < serialArry.length; index++) {
+                var label = $("label[for='" + serialArry[index].name + "']").text();
+                tempTable += '<tr><td data-f-bold="true" data-f-sz="16">' + label + '</td></tr>';
+                tempTable += '<tr><td data-a-h="left" data-f-sz="16">' + serialArry[index].value + '</td></tr>';
+                tempTable += '<tr><td></td></tr>';
+            }
+
+            tempTable += '</table>';
+            $("#table-history input").each(function () {
+                $(this).after($(this).val());
+                $(this).remove();
+            });
+
+            tempTable += $('#table-history').html();
+
+            // Add the notes to tempTable
+            tempTable += '<table data-cols-width="200">';
+            tempTable += '<tr><td></td></tr>';
+            tempTable += '<tr><td></td></tr>';
+            tempTable += '<tr><td style="font-weight:bold;" data-f-bold="true" data-f-sz="16"> Additional Information </td></tr>';
+            tempTable += '<tr data-height="50"><td colspan="15" data-f-sz="16" data-a-v="top" data-a-wrap="true">' + $('#note-texts').val() + '</td></tr>';
+            tempTable += '</table>';
+
+
+            // Add next step
+            tempTable += '<table>';
+            tempTable += '<tr><td></td></tr>';
+            tempTable += '<tr><td></td></tr>';
+            tempTable += '<tr data-cols-width="200"><td colspan="25" style="font-weight:bold;" data-f-sz="16" data-f-bold="true">NEXT STEP ---- SAVE THIS FORM THEN SUBMIT HERE TO RECEIVE PROPOSALS: -- https://www.rbundle.com/rbundle-your-business/request-proposals</td></tr>';
+            tempTable += '</table>';
+
+            $('#temp-table').html(tempTable);
+        }
+
+        function ValidToPass(option, inputsToShow, noButShow, hideArr) {
+
+            let checkVal;
+            console.log('inside check');
+            if (option == 'undefined' || option == null) {
+                return true;
+            }
+
+            if (option == 'yes' || option == true || option == 'unsure' || option == '1065') {
+                for (let index = 0; index < inputsToShow.length; index++) {
+                    checkVal = $('#' + inputsToShow[index] + ' :radio').filter(':checked').val();
+                    if (checkVal == 'yes' || checkVal == null || checkVal == 'undefined') {
+                        $("#" + inputsToShow[index]).addClass('show');
+
+                    } else {
+                        $("#" + inputsToShow[index]).addClass('show');
+                        index++;
+                        for (inputsToShow[index]; index < hideArr.length; index++) {
+                            $("#" + hideArr[index]).removeClass('show');
+                        }
+                        $('#body-error').addClass('show');
+                        return false;
+                    }
+                }
+                $('#body-error').removeClass('show');
+                return true;
+            }
+
+            if (option == 'no') {
+                if (noButShow) {
+                    for (let index = 0; index < inputsToShow.length; index++) {
+                        $("#" + inputsToShow[index]).addClass('show');
+                    }
+                    $('#body-error').removeClass('show');
+                    return true;
+
+                } else {
+                    // console.log(hideArr.length);
+                    if (hideArr != null) {
+                        for (let index = 0; index < hideArr.length; index++) {
+                            $("#" + hideArr[index]).removeClass('show');
+                        }
+                    }
+                    // $('#error-modal').modal('show');
+                    $('#body-error').addClass('show');
+                    return false;
+                }
+            }
+        }
+        // TODO remove 
+        function CloseModal() {
+            $('#error-modal').modal('hide');
+        }
+
+
+        function CheckHasValue(value, arr, showAll, allArr) {
+            let newArr;
+            var id = $(value).closest('.form-group').attr('id');
+
+            // if (showAll) {
+            // ValidToPass(true, arr);
+            // }
+
+            console.log("--- ");
+            console.log(value);
+            console.log(id);
+            console.log(arr);
+            console.log(arr.length);
+
+
+            if (value !== undefined) {
+                console.log('inside undefined check');
+
+                console.log('outside loop');
+                for (let i = 0; i < allArr.length; i++) {
+
+                    if (value !== undefined) {
+                        console.log('inside undefined check');
+
+                        var found = jQuery.inArray(id, arr);
+                        if (found >= 0) {
+                            // if found check val
+
+                            console.log('found');
+                            // Element was found, remove it.
+                            // arr.splice(id, 1);
+                            if (id == 'q7') {
+                                arr.push('q8');
+                            }
+                            let inArr = jQuery.inArray('table-history', arr);
+                            if (id == 'q8' && (found < 0)) {
+                                arr.push('table-history');
+                                arr.push('download-table');
+                                arr.push('next-steps');
+                            }
+                        } else {
+                            // Element was not found, add it.
+                            arr.push(id);
+                            console.log(id == 'q1');
+                            if (id == 'q1') {
+                                arr.push('q2');
+                                arr.push('q3');
+                            }
+                            if (id == 'q4') {
+                                arr.push('q5');
+                                arr.push('q6');
+                                arr.push('q7');
+                            }
+                            
+                        }
+
+                        console.log('arry value ' + arr[i]);
+                        console.log('arry value - 2 ' + $('#' + arr[i] + ' :radio').filter(':checked').val());
+                        console.log('arry value - 2 ' + $('#' + allArr[i] + ' :radio').filter(':checked').val());
+
+
+
+                        let option = $('#' + allArr[i] + ' :radio').filter(':checked').val();
+                        let bOut;
+                            bOut = ValidToPass(option, arr, false, arr.slice(i, arr.length));
+                        console.log('bout ---> ' + bOut);
+
+                        if (!bOut) {
+                            console.log('in bOut --<<');
+                            // ValidToPass('no', null, false, allArr.slice(i, allArr.length));
+                            i = allArr.length;
+                        }
+                    }
+                }
+
+                console.log(arr);
+
+                return arr;
+
+            } else {
+                return false;
+            }
+
+        }
+
+        function BbaUpdateTable(selectYearCheck) {
+
+            if (selectYearCheck != 0) {
+                if ($('#tax-form-select-1').val() == '1065') {
+                    let partVal = $(':radio[name="radio_part"]').filter(':checked').val();
+
+                    if (selectYearCheck < '2018' || partVal == null) {
+                        return "N/A";
+                    }
+
+                    if (selectYearCheck >= '2018' && partVal == 'yes') {
+                        return 'Yes';
+                    }
+
+                    if (selectYearCheck > '2018' && partVal == 'no') {
+                        return 'No';
+                    }
+
+                    if (selectYearCheck > '2018' && partVal == 'unsure') {
+                        return '';
+                    }
+                }
+                return "N/A";
+            }
+        }
+
+        $(document).ready(function () {
+            var formedYear;
+            var dateRange;
+            var inputKind;
+            var inputFilingEnd;
+            let tempYearCheck = 0;
+            let showArr = [];
+            let ShowAllInputs = false;
+            const allQs = ['q1', 'q2', 'q3', 'q3-b', 'q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps'];
+            // for tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+
+            const currentYear = new Date().getFullYear();
+
+            // all inputs
+            $('input').change(function () {
+                console.log($(this).val());
+                CheckHasValue($(this), showArr, ShowAllInputs, allQs);
+            });
+            $('select').change(function () {
+                CheckHasValue($(this), showArr, ShowAllInputs, allQs);
+            });
+            // q1
+            // $(':radio[name="tax-status"]').change(function () {
+            //     var checked = $(this).filter(':checked').val();
+            //     ValidToPass(checked, ['q2', 'q3'], null, ['q2', 'q3', 'q3-b', 'q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+            // });
+
+            // q2
+            $('#tax-form-select-1').change(() => {
+                $("#filing-entity-input").html($('#tax-form-select-1').val());
+                if ($('#b-year-end').val() != null && $('#tax-form-select-1').val() == '1065') {
+                    ValidToPass(true, ['q3-b'], null, ['q3', 'q3-b', 'q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+                }
+                if ($('#tax-form-select-1').val() != '1065') {
+                    $('#q3-b').removeClass('show');
+                    $('#q3-c').removeClass('show');
+                    $('#q3-b').attr('checked', false);
+                    $('#q3-c').attr('checked', false);
+                    console.log($('#q3-b').val());
+                    console.log($('#q3-c').val());
+                }
+                // ValidToPass(true, ['']);
+            });
+
+            // q3
+            $('#b-year-end').change(() => {
+                $("#filing-end-input").html($('#b-year-end').val());
+
+                if ($('#tax-form-select-1').val() == '1065') {
+                    ValidToPass(true, ['q3-b'], null, ['q3-b', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+
+                } else {
+                    ValidToPass(true, ['q4'], null, ['q3-b', 'q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+                }
+                BbaUpdateTable();
+            });
+
+            //TODO q3-b 
+            $(':radio[name="radio_part"]').change(function () {
+                var checked = $(this).filter(':checked').val();
+
+                if (checked == 'no') {
+                    ValidToPass(checked, ['q4'], true, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+                    $('#q3-c').removeClass('show');
+                } else {
+                    ValidToPass(checked, ['q3-c'], null, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+                }
+            });
+
+            // TODO q3-c 
+            $(':radio[name="radio_bba"]').change(function () {
+                // var checked = $(this).filter(':checked').val();
+                // ValidToPass(checked, ['q4'], false, ['q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+                BbaUpdateTable(tempYearCheck);
+            });
+
+            // q4
+            // $(':radio[name="radio_ein"]').change(function () {
+            //     var checked = $(this).filter(':checked').val();
+            //     ValidToPass(checked, ['q5', 'q6', 'q7'], null, ['q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps']);
+            // });
+
+            // q5
+            // $(':radio[name="radio_b"]').change(function () {
+            //     var checked = $(this).filter(':checked').val();
+            //     ValidToPass(checked, ['q6']);
+            // });
+
+            // q6
+            $("#datepicker").datepicker({
+                format: "yyyy",
+                viewMode: "years",
+                minViewMode: "years",
+                autoclose: true
+            });
+            $('#datepicker').change(() => {
+                formedYear = $('#datepicker').val();
+                dateRange = currentYear - formedYear;
+
+                if (formedYear > currentYear) {
+                    $('#datepicker').addClass('is-invalid');
+                    $('.error-msg-2').removeClass('show');
+                    $('.error-msg').addClass('show');
+                    return;
+                }
+
+                if (dateRange > 50) {
+                    $('#datepicker').addClass('is-invalid');
+                    $('.error-msg').removeClass('show');
+                    $('.error-msg-2').addClass('show');
+                    return;
+                }
+
+                if (formedYear < currentYear || dateRange < 50) {
+                    $('#datepicker').removeClass('is-invalid');
+                    $('.error-msg').removeClass('show');
+                    $('.error-msg-2').removeClass('show');
+
+                }
+                var notFuture = formedYear < currentYear;
+                ValidToPass(notFuture, [''], null, null);
+                BbaUpdateTable(tempYearCheck);
+                // $('#table-history').addClass('show');
+            });
+
+            // q7            
+            // $('#b-kind').change(() => {
+            //     $("#legal-entity-input").html($('#b-kind').val());
+            //     ValidToPass(true, ['q8'], null, ['q8', 'table-history', 'notes', 'download-table', 'next-steps']);
+            // });
+
+            // q8
+            $(':radio[name="radio1"]').change(function () {
+                // var checked = $(this).filter(':checked').val();
+                // ValidToPass(true, ['table-history', 'notes'], null, ['table-history', 'notes', 'download-table', 'next-steps']);
+                ShowAllInputs = true;
+            });
+
+            $('#table-history input').change(() => {
+                // $('#table-history input[class^="table-date-form-input-"]').change(() => {
+
+                alert('changed');
+                console.log($(this).val());
+            });
+
+
+            $('.form-group').change(() => {
+                var tableHistoryContent = '<div class="table-title title-text">BUSINESS TAX FILING HISTORY</div>' +
+                    '<div class="table-sub-text"><p><strong>CHECK TABLE FOR ACCURACY<strong><br>This table is populated based on the information above. Please correct either the Tax Year, Legal Entity type, or Subject to BBA as needed. Once this section is accurate, move to the next Section.</p></div>' +
+                    '<table class="table table-bordered">' +
+                    ' <thead>' +
+                    '<tr>' +
+                    '<th scope="col" colspan="5" data-f-sz="16" data-f-bold="true"></th>' +
+                    ' <th scope="col" colspan="5" data-f-sz="16" data-f-bold="true" data-b-a-s="bold" >Tax Years</th>' +
+                    ' <th scope="col" colspan="5" data-f-sz="16" data-f-bold="true">Fedral Income Tax Form</th>' +
+                    '<th scope="col" colspan="5" data-f-sz="16" data-f-bold="true">Legal Entity</th>' +
+                    ' <th scope="col" colspan="5" data-f-sz="16" data-f-bold="true">Subject to BBA</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '<tbody>';
+
+                // get current year and subtract the from the formed date
+                var printDate = currentYear - 2000;
+                var yearText = 'Current Year (CY)';
+                // TODO dont run if formed date is not set
+
+                for (var i = 0; i < dateRange + 1; i++) {
+                    if (i > 0) {
+                        yearText = 'Current Year (CY-' + i + ')';
+                    }
+                    tableHistoryContent += '<tr><th scope="row" colspan="5" data-f-sz="16" data-f-bold="true">' + yearText + '</th>';
+                    tableHistoryContent += '<td data-f-sz="16" colspan="5" ><input type="text" id="table-date-form-input-' + i + '" value=""></td>';
+                    tableHistoryContent += '<td data-f-sz="16" colspan="5" data-b-a-s="bold"><input type="text" id="table-tax-form-input-' + i + '" value=""></td>';
+                    tableHistoryContent += '<td data-f-sz="16" colspan="5" data-b-a-s="bold"><input type="text" id="table-entity-input-' + i + '" value=""></td>';
+                    tableHistoryContent += '<td data-f-sz="16" colspan="5" data-b-a-s="bold"><input type="text" id="table-bba-input-' + i + '" value=""></td></tr>';
+                    printDate--;
+                }
+                tableHistoryContent += "<tbody></table>";
+
+                $('#table-history').html(tableHistoryContent);
+                tempYearCheck = currentYear;
+                for (var i = 0; i < dateRange + 1; i++) {
+                    $('#table-date-form-input-' + i).val($('#b-year-end').val() + '/' + printDate);
+                    $('#table-tax-form-input-' + i).val($('#tax-form-select-1').val());
+                    $('#table-entity-input-' + i).val($('#b-kind').val());
+                    $('#table-bba-input-' + i).val(BbaUpdateTable(tempYearCheck));
+                    tempYearCheck--;
+                }
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
