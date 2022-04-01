@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    /* .wob-item {
+        width: 150px;
+        border: 1px solid rgb(194, 194, 194);
+        border-radius: 10px;
+        padding: 10px 25px 10px 0;
+        margin: 10px 0;
+        background: rgb(146, 181, 116);
+
+    }
+
+    .wob-item:hover {
+        -webkit-animation-name: wobble;
+        animation-name: wobble;
+        -webkit-animation-duration: 0.8s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+        -webkit-transform-origin: 50% 100%;
+    }
+
+
+    @keyframes wobble {
+        0% {
+            -webkit-transform: none;
+            transform: none;
+        }
+
+        15% {
+            -webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+            transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+
+        30% {
+            -webkit-transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+            transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+
+        45% {
+            -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+
+        60% {
+            -webkit-transform: translate3d(3%, 0, 0) rotate3d(0, 0, 1, 2deg);
+            transform: translate3d(3%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+
+        75% {
+            -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+            transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+
+        100% {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .wobble {}
+
+    .pulse-btn {
+        cursor: pointer;
+        text-align: center;
+        padding: 12px 25px;
+        width: 30px;
+        height: 30px;
+        margin-right: 40px;
+        color: #fff;
+        border-radius: 5px;
+        background: #2735d5;
+        box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.8);
+        animation: pulsing 1.72s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+
+    @keyframes pulsing {
+        to {
+            box-shadow: 0 0 0 30px rgba(255, 249, 230, 0);
+        }
+    }
+
+
+    .no-design {
+        list-style-type: none;
+        position: relative;
+    }
+
+    .line-list {
+        border-radius: 50px;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        background: #2735d5;
+        box-shadow: 0 0 0 0 rgba(230, 237, 255, 0.8);
+    } */
+
+
+    .clip-btn {
+        position: relative;
+        background: rgb(255, 255, 255);
+        width: 150px;
+        height: 50px;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 50px 8px;
+        margin: 10px 0;
+        border: 1px solid rgb(222, 222, 222);
+
+    }
+
+    .clip-bg {
+        clip-path: circle(21px at -4px 44px);
+        transition: all 1s ease;
+        border-radius: 100px 8px;
+        background: #7E8E43;
+        height: 100%;
+        width: 100%;
+    }
+
+    .clip-btn:hover .clip-bg {
+        clip-path: circle(100%);
+    }
+
+    .clip-btn-text {
+        position: absolute;
+        font-size: 18px;
+        /* font-weight: bold; */
+        text-decoration: none;
+        color: rgb(57, 57, 57);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: all 0.4s ease;
+        transform: translate(-50%, -50%);
+    }
+
+    .clip-btn:hover .clip-btn-text {
+        color: #fff;
+    }
+
+    .center-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="center-flex">
+        <div class="clip-btn">
+            <div class="clip-bg"></div>
+            <div class="clip-btn-text">College & Universities</div>
+        </div>
+        <div class="clip-btn">
+            <div class="clip-bg"></div>
+            <div class="clip-btn-text">Corporate Cafeterias</div>
+        </div>
+        <div class="clip-btn">
+            <div class="clip-bg"></div>
+            <div class="clip-btn-text">Convenience</div>
+        </div>
+        <div class="clip-btn">
+            <div class="clip-bg"></div>
+            <div class="clip-btn-text">Grocery Prepared Foods</div>
+        </div>
+    </div>
+
+
+
+<div class="center-flex">
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">QSR</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Concessions</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Military</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Healthy Vending</div>
+    </div>
+</div>
+
+
+<div class="center-flex">
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Travel</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Healthcare</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Restaurants</div>
+    </div>
+    <div class="clip-btn">
+        <div class="clip-bg"></div>
+        <div class="clip-btn-text">Home Meal Delivery</div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

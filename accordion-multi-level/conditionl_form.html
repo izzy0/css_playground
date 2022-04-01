@@ -367,9 +367,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="form-group">
-                    <button name="submit" type="submit" class="btn btn-primary">Next</button>
-                </div> -->
+
                 <div id="body-error">
                     <p>YOUR BUSINESS IS NOT ELIGIBILE FOR THIS SERVICE AT THIS TIME.</p>
                 </div>
@@ -381,52 +379,25 @@
             <div id="table-history"></div>
             <div id="add-btn" class="btn btn-outline-secondary" onclick="AddTableRow()"><i class="far fa-plus"></i>Add
                 Row</div>
-            <!-- <button id="show-options" class="btn btn-primary"
-                onclick=" ValidToPass(true, ['notes','download-table','next-steps'])">Continue</button> -->
+
             <div id="notes">
                 <label for="notes-texts">OPTIONAL - PROVIDER NOTES</label>
                 <p>In box below, enter any additional information you think is relevant to providers to generate your
                     service proposal.</p>
                 <textarea name="notes-texts" id="note-texts" style="width:100%;" rows="10"></textarea>
             </div>
-            <!-- <button id="edit-table" class="btn btn-primary" onclick=" EditTable()"> Edit </button>
-            <button id="save-table" class="btn btn-primary" onclick=" SaveTable()"> Save </button> -->
 
-            <!-- <button id="download-table" class="btn btn-primary" onclick=" HtmlTOExcel('xls')"> Download To Excel
-            </button> -->
             <div id="download-btn-contianer">
                 <button id="download-table" class="btn btn-primary" onclick=" ExportToExcel()"><i
                         class="fa-solid fa-download"></i> Download To Excel
                 </button>
             </div>
-            <!-- <button id="download-table" class="btn btn-primary" onclick=" ExportTable()"> Download </button> -->
             <div id="temp-table"></div>
             <div id="next-steps">
                 NEXT STEP – Download this form to excel. To request proposals, submit the downloaded form here:<br>
-                <a href="https://www.rbundle.com/rbundle-your-business/request-proposals"
-                    target="_blank">https://www.rbundle.com/rbundle-your-business/request-proposals</a>
             </div>
         </div>
     </div>
-
-
-    <!-- <div id="error-modal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Business Qualififcation</h5>
-
-                </div>
-                <div class="modal-body">
-                    <p>YOUR BUSINESS IS NOT ELIGIBILE FOR THIS SERVICE AT THIS TIME.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        onclick="CloseModal()">Close</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -443,8 +414,6 @@
         referrerpolicy="no-referrer"></script>
 
     <script>
-
-
         function AllInputsFilled() {
             $('input').each(function () {
                 if ($(this).val() != '') {
@@ -463,10 +432,10 @@
 
             ExportTable();
             let table = document.querySelector("#temp-table");
-            TableToExcel.convert(table, { // html code may contain multiple tables so here we are refering to 1st table tag
-                name: `Tax - IRS Audit Monitoring.xlsx`, // fileName you could use any name
+            TableToExcel.convert(table, { 
+                name: `excel.xlsx`, 
                 sheet: {
-                    name: 'Sheet 1' // sheetName
+                    name: 'Sheet 1' 
                 }
             });
         }
@@ -550,28 +519,7 @@
 
             if (option == 'yes' || option == true || option == 'unsure' || option == '1065' || option == 'undefined' || option == null) {
                 for (let index = 0; index < inputsToShow.length; index++) {
-                    //     checkVal = $('#' + inputsToShow[index] + ' :radio').filter(':checked').val();
-                    //     if (checkVal == 'yes' || checkVal == null || checkVal == 'undefined') {
-                    // console.log(PassableRadio(inputsToShow[index]));
-                    // if (PassableRadio(inputsToShow[index])) {
                     $("#" + inputsToShow[index]).addClass('show');
-
-                    // } else {
-                    //     $("#" + inputsToShow[index]).addClass('show');
-                    //     $('#body-error').addClass('show');
-                    //     index = inputsToShow.length;
-                    //     return false;
-                    // }
-
-                    // } else {
-                    //     $("#" + inputsToShow[index]).addClass('show');
-                    //     index++;
-                    //     for (inputsToShow[index]; index < hideArr.length; index++) {
-                    //         $("#" + hideArr[index]).removeClass('show');
-                    //     }
-                    //     $('#body-error').addClass('show');
-                    //     return false;
-                    // }
                 }
 
                 $('#body-error').removeClass('show');
@@ -611,12 +559,9 @@
             if (noErr == 'undefined ') {
                 noErr = false;
             }
-            // if (hideArr != null) {
             for (let index = 0; index < hideArr.length; index++) {
                 $("#" + hideArr[index]).removeClass('show');
             }
-            // }
-            // $('#error-modal').modal('show');
             $('#body-input-warning').addClass('show');
             if (!noErr) {
                 $('#body-error').addClass('show');
@@ -671,103 +616,24 @@
             let newArr;
             let showQs = false;
             var id = $(value).closest('.form-group').attr('id');
-            // var unique = arr.filter((v, i, a) => a.indexOf(v) === i); 
-            // if (showAll) {
-            // ValidToPass(true, arr);
-            // }
 
-            console.log("--- ");
-            console.log($('#other-input-date').val());
-            console.log(value);
-            console.log(id);
-            console.log(arr);
-            // console.log(unique);
-            console.log(arr.length);
-            // arr = unique;
-
-     
             if (value !== undefined) {
-                console.log('inside undefined check');
 
                 arr.push(id);
                 arr = [... new Set(arr)];
-                console.log(arr);
 
-                console.log('outside loop');
-                // for (let i = 0; i < allArr.length; i++) {
                 for (let i = 0; i < arr.length; i++) {
 
-                    // if (value !== undefined) {
                     console.log('inside undefined check');
 
                     var found = jQuery.inArray(id, arr);
-                    // if (found >= 0) {
-                    //     // if found check val
 
-                    //     console.log('found');
-                    //     // Element was found, remove it.
-                    //     // arr.splice(id, 1);
-                    //     if (id == 'q7') {
-                    //         arr.push('q8');
-                    //     }
-                    //     let inArr = jQuery.inArray('table-history', arr);
-                    //     if (id == 'q8' && (found < 0)) {
-                    //         arr.push('table-history');
-                    //         arr.push('download-table');
-                    //         arr.push('next-steps');
-                    //     }
-                    // } else {
-                    // Element was not found, add it.
-                    // arr.push(id);
-
-                    // $('#main-form input').blur(function () {
-                    //     if (!this.value) {
-                    //         $(this).parents('div').addClass('warning');
-                    //         console.log('empty string value');
-                    //     }
-                    // });
-
-
- 
                     console.log(id);
                     if (id == 'q1') {
                         arr.push('q2');
                         arr.push('q3');
                     }
-                    // console.log('------------|| -------  ' );
-                    // console.log( $('#q2 select').val() == '1065');
-                    // if ($('#q2 select').val() == '1065') {
-                        // arr.push('q3-b');
-                        // arr.push('q3-c');
-                    // }
 
-
-                    // if ($('#q3 select').val() == 'other') {
-                    //     arr.push('other-input-date');
-                    // }
-                    // if ($('#q3 select').val() != 'other') {
-                    //     const finderIndex = arr.indexOf('other-input-date');
-                    //     if (finderIndex > -1) {
-                    //         arr.splice(finderIndex, 1);
-                    //     }
-                    // }
-
-
-                    // if (arr[i] == 'q3-b') {
-                    //     if (ShowNextQs(['q3-b'])) {
-                    //         arr.push('q3-c');
-                    //     } else {
-                    //         HideQuestions(['table-history', 'notes', 'download-table', 'next-steps', 'add-btn'], true)
-                    //     }
-
-                    // }
-                    // if (arr[i] == 'q3-c') {
-                    //     if (!ShowNextQs(['q3-c'])) {
-                        
-                    //         HideQuestions(['table-history', 'notes', 'download-table', 'next-steps', 'add-btn'], true)
-                    //     }
-
-                    // }
 
                     if (id == 'q4') {
                         arr.push('q5');
@@ -775,15 +641,15 @@
                         arr.push('q7');
                     }
                     if (id == 'q7') {
-                            if ($('#other-input-date').hasClass('show')) {
-                                if (ShowNextQs(['q3'])) {
-                                    arr.push('q8');
-                                } else {
-                                    HideQuestions(['table-history', 'notes', 'download-table', 'next-steps', 'add-btn'], true)
-                                }
-                            } else {
+                        if ($('#other-input-date').hasClass('show')) {
+                            if (ShowNextQs(['q3'])) {
                                 arr.push('q8');
+                            } else {
+                                HideQuestions(['table-history', 'notes', 'download-table', 'next-steps', 'add-btn'], true)
                             }
+                        } else {
+                            arr.push('q8');
+                        }
 
 
                     }
@@ -798,24 +664,9 @@
                         } else {
                             HideQuestions(['q8', 'table-history', 'notes', 'download-table', 'next-steps', 'add-btn'], true)
                         }
-
-
                     }
 
                     arr = [... new Set(arr)];
-
-                    console.log('arry value ' + arr[i]);
-                    console.log('arry value - 2 ' + $('#' + arr[i] + ' :radio').filter(':checked').val());
-                    console.log('arry value - 2 ' + $('#' + allArr[i] + ' :radio').filter(':checked').val());
-
-
-
-                    // let option = $('#' + allArr[i] + ' :radio').filter(':checked').val();
-                    // let option = $('#' + arr[i] + ' :radio').filter(':checked').val();
-                    // let bOut;
-                    // bOut = ValidToPass(option, arr, false, arr.slice(i, arr.length));
-                    // console.log('bout ---> ' + bOut);
-
 
                     if (PassableRadio(arr[i])) {
                         $("#" + arr[i]).addClass('show');
@@ -832,21 +683,8 @@
                         // $('#body-error').addClass('show');
                         i = arr.length;
                     }
-
-
-
-
-                    // if (!bOut) {
-                    //     console.log('in bOut --<<');
-                    //     // ValidToPass('no', null, false, allArr.slice(i, allArr.length));
-                    //     i = allArr.length;
-                    // }
-                    // }
                 }
 
-                // console.log(unique);
-                // unique = arr.filter((v, i, a) => a.indexOf(v) === i); 
-                // arr = unique;
                 console.log(arr);
 
                 return arr;
@@ -901,9 +739,7 @@
             let i = $('#table-history table tbody tr:last-child').data('order');
             i++;
             let yearText = 'Current Year (CY-' + i + ')';
-            console.log($('#table-history table > tbody:last-child tr:last-child').attr('data-order'));
-            console.log(i);
-            console.log(typeof i);
+         
             tableHistoryContent = '<tr data-order="' + i + '" ><th scope="row" colspan="5" data-f-sz="16" data-f-bold="true">' + yearText + '</th>';
             tableHistoryContent += '<td data-f-sz="16" colspan="5" ><input type="text" id="table-date-form-input-' + i + '" value=" " onchange="InputCheck(this)"></td>';
             tableHistoryContent += '<td data-f-sz="16" colspan="5" data-b-a-s="bold"><input type="text" id="table-tax-form-input-' + i + '" value=" " onchange="InputCheck(this)"></td>';
@@ -967,8 +803,6 @@
                     $('#q3-c').removeClass('show');
                     $('#q3-b').attr('checked', false);
                     $('#q3-c').attr('checked', false);
-                    console.log($('#q3-b').val());
-                    console.log($('#q3-c').val());
                 }
                 // ValidToPass(true, ['']);
             });
@@ -1004,8 +838,8 @@
                 var checked = $(this).filter(':checked').val();
 
                 if (checked == 'no') {
-                    if (showAll){
-                        ValidToPass(true, [ 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn'], true, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn'])
+                    if (showAll) {
+                        ValidToPass(true, ['q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn'], true, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn'])
                     }
                     ValidToPass(checked, ['q4'], true, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn']);
                     $('#q3-c').removeClass('show');
@@ -1013,7 +847,7 @@
                     ValidToPass(checked, ['q3-c'], null, ['q3-c', 'q4', 'q5', 'q6', 'q7', 'q8', 'table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn']);
                 }
 
-                if(checked !== 'undefined' || checked !== 'no'){
+                if (checked !== 'undefined' || checked !== 'no') {
                     HideQuestions(['table-history', 'show-options', 'notes', 'download-table', 'next-steps', 'add-btn'], true);
                 }
 
@@ -1073,7 +907,6 @@
                 var notFuture = formedYear < currentYear;
                 ValidToPass(notFuture, [''], null, null);
                 BbaUpdateTable(tempYearCheck);
-                // $('#table-history').addClass('show');
             });
 
             // q7            
@@ -1100,43 +933,7 @@
 
             $('#other-input-date').mask("99/99", { placeholder: 'MM/DD' });
 
-            // $('#other-input-date').keydown(function (e) {
-            //     $('#other-input-date').mask("99/99", {placeholder: 'MM/DD' });
 
-            //     this.value = this.value.replace(/\d{1,2}\/\d{1,2}/g,'');
-
-            // var test = /[0-9]/; //regex
-            // var regx = new RegExp(/\d{1,2}\/\d{1,2}/);
-            // // var value = String.fromCharCode(e.keyCode); //get the charcode and convert to char
-            // var value = this.value; //get the charcode and convert to char
-            // console.log(value.match(/\d{1,2}\/\d{1,2}/));
-            // console.log(regx.test(value));
-            // if (value.match(test)) {
-            //     if (regx.test(value)) {
-            //         return true; //dont display key if it is a number
-            //     }
-            // }
-
-            // });
-
-            // $('#table-history input').change(() => {
-            //     // $('#table-history input[class^="table-date-form-input-"]').change(() => {
-
-            //     alert('changed');
-            //     console.log($(this).val());
-            // });
-
-            // $('#table-history input').blur(function () {
-            //     if (!this.value) {
-            //         $(this).parents('tr').addClass('warning');
-            //         $('#download-btn-contianer').addClass('disabled');
-            //         $('#download-table').addClass('disabled');
-            //     } else {
-            //         $(this).parents('tr').removeClass('warning');
-            //         $('#download-btn-contianer').removeClass('disabled');
-            //         $('#download-table').removeClass('disabled');
-            //     }
-            // });
 
 
             $('.form-group').change(() => {
@@ -1192,9 +989,5 @@
             });
         });
     </script>
-
-
-
 </body>
-
 </html>
